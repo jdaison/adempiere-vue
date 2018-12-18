@@ -1,8 +1,8 @@
 
 {
-    "type": "String",
+    "type": "Text",
     "data": {
-      "ID": 5,
+      "ID": 4,
       "AD_Chart_ID": 1,
       "AD_Process_ID": 6,
       "AD_Reference_ID": 7,
@@ -43,10 +43,10 @@
       "PreferedWidth": 100,
 
       "SeqNo": 0,
-      "SortNo": 2,
+      "SortNo": 0,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
-      "ValueMin": 1,
+      "ValueMin": 2,
       "ValueMax": 100,
       "VFormat": "dd-mm-yyy"
     }

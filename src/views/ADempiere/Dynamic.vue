@@ -1,8 +1,8 @@
 
 <template>
   <div class="app-container">
-    <div v-for="element in dataAttributes" :key="element.data.ID">
-      <ad-reference :data-attributes="element" />
+    <div v-for="(item, key) in even(dataAttributes)" :key="item.data.ID">
+      <ad-reference :data-attributes="item" :data-key="key" />
       <br>
     </div>
   </div>
@@ -13,6 +13,7 @@
 import jsonButton from '@/views/ADempiere/data/dataAttributes.Button.json'
 import jsonDate from '@/views/ADempiere/data/dataAttributes.Date.json'
 import jsonInteger from '@/views/ADempiere/data/dataAttributes.Integer.json'
+import jsonString from '@/views/ADempiere/data/dataAttributes.String.json'
 import jsonText from '@/views/ADempiere/data/dataAttributes.Text.json'
 import AdReference from '@/components/ADempiere/AD_Reference'
 
@@ -27,7 +28,8 @@ export default {
         jsonText,
         jsonInteger,
         jsonDate,
-        jsonButton
+        jsonButton,
+        jsonString
       ]
     }
   },
@@ -38,6 +40,18 @@ export default {
     }
     console.log(JSON.stringify(this.dataAttributes, null, 4));
     */
+  },
+  methods: {
+    /*
+     * Sorts the components according to the value that is obtained from the
+     * array that contains the JSON objects in the data.SortNo property
+     */
+    even(arr) {
+      // Set slice() to avoid to generate an infinite loop!
+      return arr.slice().sort(function(a, b) {
+        return a.data.SortNo - b.data.SortNo
+      })
+    }
   }
 }
 </script>

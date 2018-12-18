@@ -43,10 +43,10 @@
       "PreferedWidth": 100,
 
       "SeqNo": 0,
-      "SortNo": 0,
+      "SortNo": 100,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
-      "ValueMin": 0,
+      "ValueMin": 33,
       "ValueMax": 100,
       "VFormat": "dd-mm-yyy"
     }
