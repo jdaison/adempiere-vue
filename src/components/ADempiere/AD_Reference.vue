@@ -6,6 +6,10 @@
     placement="top" >
 
     <div>
+      <span v-if="dataAttributes.type.toLowerCase() != 'button'" class="demo-input-label" >
+        {{ dataAttributes.data.Name }}
+      </span>
+
       <component :is="componentLoader" :data="dataAttributes.data" />
       <component v-if="dataAttributes.data.IsRange" :is="componentLoader" :data="dataAttributes.data"/>
     </div>

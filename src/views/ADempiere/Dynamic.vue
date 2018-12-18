@@ -10,11 +10,11 @@
 
 <script>
 /* json response prototype with attributes of the field and column */
-import jsonButton from '@/views/ADempiere/data/dataAttributes.Button.json'
-import jsonDate from '@/views/ADempiere/data/dataAttributes.Date.json'
-import jsonInteger from '@/views/ADempiere/data/dataAttributes.Integer.json'
-import jsonString from '@/views/ADempiere/data/dataAttributes.String.json'
-import jsonText from '@/views/ADempiere/data/dataAttributes.Text.json'
+import jsonButton from '@/views/ADempiere/data/field/dataAttributes.Button.json'
+import jsonDate from '@/views/ADempiere/data/field/dataAttributes.Date.json'
+import jsonInteger from '@/views/ADempiere/data/field/dataAttributes.Integer.json'
+import jsonString from '@/views/ADempiere/data/field/dataAttributes.String.json'
+import jsonText from '@/views/ADempiere/data/field/dataAttributes.Text.json'
 import AdReference from '@/components/ADempiere/AD_Reference'
 
 export default {

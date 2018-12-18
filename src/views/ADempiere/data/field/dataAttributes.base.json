@@ -1,15 +1,9 @@
 
 {
-    "type": "Button",
+    "type": "",
     "data": {
-      "ID": 1,
-      "AD_Chart_ID": 2,
-      "AD_Process_ID": 6,
       "AD_Reference_ID": 7,
-      "AD_Reference_Value_ID": 8,
-      "AD_Table_ID": 9,
-      "AD_Val_Rule_ID": 10,
-
+      "ID": 2,
       "Callout": "odt",
       "ColumnName": "Column Name",
       "ContextInfoScript": 0,
@@ -20,9 +14,8 @@
       "Description": "Description",
       "DisplayLength": 6,
       "DisplayLogic": "Display Logic",
-      "DisplayType": "Display Type",
+      "DisplayType": "AD Reference",
       "FieldLength": 0,
-      "FormatPattern": 0,
       "Help": "Help",
 
       "InfoFactoryClass": 0,
@@ -34,20 +27,17 @@
       "IsKey": true,
       "IsMandatory": true,
       "IsParent": true,
-      "IsRange": false,
+      "IsRange": true,
       "IsReadOnly": true,
       "IsTranslated": false,
       "IsUpdateable": true,
 
-      "Name": "Name Label Button",
+      "Name": "Name Label Date",
       "PreferedWidth": 100,
 
       "SeqNo": 0,
-      "SortNo": 100,
+      "SortNo": 0,
       "UUID": "Unique Universal Id",
-      "ValidationCode": 0,
-      "ValueMin": 33,
-      "ValueMax": 100,
-      "VFormat": "dd-mm-yyy"
+      "ValidationCode": 0
     }
 }
