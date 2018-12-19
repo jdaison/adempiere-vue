@@ -7,11 +7,14 @@
 
 <script>
 export default {
-  name: 'ADButton',
+  name: 'Button',
   props: {
     data: {
       type: Object,
-      default: () => ({})
+      default: () => ({
+        Name: 'Name Button',
+        AD_Process_ID: 123
+      })
     }
   },
   data() {
@@ -21,12 +24,10 @@ export default {
   },
   methods: {
     processButton() {
-      alert('this process id is = ' + this.data.AD_Process_ID)
+      alert('This process id is  \n' + this.data.AD_Process_ID)
     }
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
