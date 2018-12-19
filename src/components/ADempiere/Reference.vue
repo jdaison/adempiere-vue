@@ -19,7 +19,7 @@
 <script>
 /* This Component BASE */
 export default {
-  name: 'ADReference',
+  name: 'Reference',
   props: {
     // receives the property that is an object with all the attributes
     dataAttributes: {
