@@ -11,13 +11,19 @@
       </span>
 
       <component :is="componentLoader" :data="dataAttributes.data" />
-      <component v-if="dataAttributes.data.IsRange" :is="componentLoader" :data="dataAttributes.data"/>
+      <component
+        v-if="dataAttributes.data.IsRange && componentTypeRange.includes(dataAttributes.type)"
+        :is="componentLoader"
+        :data="dataAttributes.data" />
     </div>
   </el-tooltip>
 </template>
 
 <script>
-/* This Component BASE */
+/*
+ * This is the base component for linking the components according to the
+ * reference (or type of visualization) of each field
+ */
 export default {
   name: 'Reference',
   props: {
@@ -27,20 +33,17 @@ export default {
       required: true
     }
   },
-  /*
-    //verify utility
-    mounted() {
-      if (this.dataAttributes) {
-      //if (this.$props.componentFile) {
-        loadComponent()
-      }
-    },
-    */
+  data() {
+    return {
+      componentTypeRange: [
+        'Amount', 'Date', 'DateTime', 'Integer', 'Quantity', 'Time'
+      ]
+    }
+  },
   computed: {
     // load the component that is indicated in the attributes of the received property
     componentLoader() {
       return () => import('./' + this.dataAttributes.type)
-      // return () => import('@/components/ADempiere/' + this.dataAttributes.type)
     }
   },
   beforeMount() {
