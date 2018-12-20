@@ -19,76 +19,90 @@ const chartsRouter = {
       meta: { title: 'Dynamic Component', noCache: true }
     },
     {
-      path: 'amount',
-      component: () => import('@/components/ADempiere/Amount'),
-      name: 'Amount',
-      meta: { title: 'Amount', noCache: true }
+      path: 'contextVariables',
+      component: () => import('@/views/ADempiere/ContextVariables'),
+      name: 'contextVariables',
+      meta: { title: 'Context Variables', noCache: true }
     },
     {
-      path: 'binary',
-      component: () => import('@/components/ADempiere/Binary'),
-      name: 'Binary',
-      meta: { title: 'Binary', noCache: true }
-    },
-    {
-      path: 'button',
-      component: () => import('@/components/ADempiere/Button'),
-      name: 'Button',
-      meta: { title: 'Button', noCache: true }
-    },
-    {
-      path: 'date',
-      component: () => import('@/components/ADempiere/Date'),
-      name: 'Date',
-      meta: { title: 'Date', noCache: true }
-    },
-    {
-      path: 'dateTime',
-      component: () => import('@/components/ADempiere/DateTime'),
-      name: 'DateTime',
-      meta: { title: 'Date Time', noCache: true }
-    },
-    {
-      path: 'filePathOrName',
-      component: () => import('@/components/ADempiere/FilePathOrName'),
-      name: 'FilePathOrName',
-      meta: { title: 'File Path Or Name', noCache: true }
-    },
-    {
-      path: 'Integer',
-      component: () => import('@/components/ADempiere/Integer'),
-      name: 'Integer',
-      meta: { title: 'Integer', noCache: true }
-    },
-    {
-      path: 'Quantity',
-      component: () => import('@/components/ADempiere/Quantity'),
-      name: 'Quantity',
-      meta: { title: 'CostsPrices', noCache: true }
-    },
-    {
-      path: 'String',
-      component: () => import('@/components/ADempiere/String'),
-      name: 'String',
-      meta: { title: 'String', noCache: true }
-    },
-    {
-      path: 'Text',
-      component: () => import('@/components/ADempiere/Text'),
-      name: 'Text',
-      meta: { title: 'Text', noCache: true }
-    },
-    {
-      path: 'Time',
-      component: () => import('@/components/ADempiere/Time'),
-      name: 'Time',
-      meta: { title: 'Time', noCache: true }
-    },
-    {
-      path: 'YesNo',
-      component: () => import('@/components/ADempiere/YesNo'),
-      name: 'YesNo',
-      meta: { title: 'Yes or No', noCache: true }
+      path: 'componentReference',
+      component: () => import('@/components/ADempiere/Reference'),
+      name: 'componentReference',
+      meta: { title: 'References', noCache: true },
+      children: [
+        {
+          path: 'amount',
+          component: () => import('@/components/ADempiere/Amount'),
+          name: 'Amount',
+          meta: { title: 'Amount', noCache: true }
+        },
+        {
+          path: 'binary',
+          component: () => import('@/components/ADempiere/Binary'),
+          name: 'Binary',
+          meta: { title: 'Binary', noCache: true }
+        },
+        {
+          path: 'button',
+          component: () => import('@/components/ADempiere/Button'),
+          name: 'Button',
+          meta: { title: 'Button', noCache: true }
+        },
+        {
+          path: 'date',
+          component: () => import('@/components/ADempiere/Date'),
+          name: 'Date',
+          meta: { title: 'Date', noCache: true }
+        },
+        {
+          path: 'dateTime',
+          component: () => import('@/components/ADempiere/DateTime'),
+          name: 'DateTime',
+          meta: { title: 'Date Time', noCache: true }
+        },
+        {
+          path: 'filePathOrName',
+          component: () => import('@/components/ADempiere/FilePathOrName'),
+          name: 'FilePathOrName',
+          meta: { title: 'File Path Or Name', noCache: true }
+        },
+        {
+          path: 'Integer',
+          component: () => import('@/components/ADempiere/Integer'),
+          name: 'Integer',
+          meta: { title: 'Integer', noCache: true }
+        },
+        {
+          path: 'Quantity',
+          component: () => import('@/components/ADempiere/Quantity'),
+          name: 'Quantity',
+          meta: { title: 'CostsPrices', noCache: true }
+        },
+        {
+          path: 'String',
+          component: () => import('@/components/ADempiere/String'),
+          name: 'String',
+          meta: { title: 'String', noCache: true }
+        },
+        {
+          path: 'Text',
+          component: () => import('@/components/ADempiere/Text'),
+          name: 'Text',
+          meta: { title: 'Text', noCache: true }
+        },
+        {
+          path: 'Time',
+          component: () => import('@/components/ADempiere/Time'),
+          name: 'Time',
+          meta: { title: 'Time', noCache: true }
+        },
+        {
+          path: 'YesNo',
+          component: () => import('@/components/ADempiere/YesNo'),
+          name: 'YesNo',
+          meta: { title: 'Yes or No', noCache: true }
+        }
+      ]
     }
   ]
 }

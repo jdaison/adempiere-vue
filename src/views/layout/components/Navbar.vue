@@ -39,6 +39,9 @@
               {{ $t('navbar.github') }}
             </el-dropdown-item>
           </a>
+          <el-dropdown-item>
+            <context-variables-layout/>
+          </el-dropdown-item>
           <el-dropdown-item divided>
             <span style="display:block;" @click="logout">{{ $t('navbar.logOut') }}</span>
           </el-dropdown-item>
@@ -57,10 +60,12 @@ import Screenfull from '@/components/Screenfull'
 import SizeSelect from '@/components/SizeSelect'
 import LangSelect from '@/components/LangSelect'
 import ThemePicker from '@/components/ThemePicker'
+import ContextVariablesLayout from '@/views/layout/components/ADempiere/ContextVariablesLayout'
 
 export default {
   components: {
     Breadcrumb,
+    ContextVariablesLayout, // Context Variables ADempiere
     Hamburger,
     ErrorLog,
     Screenfull,
@@ -81,6 +86,7 @@ export default {
       this.$store.dispatch('toggleSideBar')
     },
     logout() {
+      sessionStorage.clear() // eliminates the SessionStorage and therefore the context variables
       this.$store.dispatch('LogOut').then(() => {
         location.reload()// In order to re-instantiate the vue-router object to avoid bugs
       })

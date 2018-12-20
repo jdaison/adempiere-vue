@@ -1,0 +1,7 @@
+{
+  "a": 1,
+  "b": "c",
+  "#global": "Context Globals",
+  "$accounting": "Context Accounting",
+  "@a": "Context"
+}
