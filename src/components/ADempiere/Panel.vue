@@ -2,19 +2,19 @@
 <template>
   <div>
     <div v-for="(item, key) in sortFields(dataAttributes)" :key="item.data.ID">
-      <reference :data-attributes="item" :data-key="key" />
+      <field :data-attributes="item" :data-key="key" />
       <br>
     </div>
   </div>
 </template>
 
 <script>
-import Reference from '@/components/ADempiere/Reference'
+import Field from '@/components/ADempiere/Field'
 
 export default {
-  name: 'Fields',
+  name: 'Panel',
   components: {
-    Reference
+    Field
   },
   props: {
     dataAttributes: {
