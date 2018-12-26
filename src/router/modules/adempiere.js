@@ -38,7 +38,7 @@ const chartsRouter = {
     },
     {
       path: 'date',
-      component: () => import('@/components/ADempiere/Date'),
+      component: () => import('@/views/ADempiere/DateDemo'),
       name: 'Date',
       meta: { title: 'Date', noCache: true }
     },

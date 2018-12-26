@@ -4,9 +4,10 @@
     <span class="demonstration">Default</span>
     <el-date-picker
       v-model="value1"
+      :format="data.VFormat"
       type="date"
       placeholder="Pick a day"
-      format="dd/MM/yyyy"/>
+    />
   </div>
 </template>
 
