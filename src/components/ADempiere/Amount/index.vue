@@ -1,6 +1,3 @@
-<!-- the :precision attribute indicating the decimal quantity
-:min="data.ValueMin"
-      :max="data.ValueMax"-->
 <template>
   <div>
     <el-input-number
