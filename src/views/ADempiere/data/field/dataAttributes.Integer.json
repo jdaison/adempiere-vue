@@ -1,6 +1,6 @@
 
 {
-    "type": "Amount",
+    "type": "Integer",
     "data": {
       "ID": 3,
       "AD_Chart_ID": 1,
@@ -16,7 +16,7 @@
       "ContextInfoFormatter": 0,
 
       "DefaultLogic": "Default Logic",
-      "DefaultValue": "Default Value",
+      "DefaultValue": 0,
       "Description": "Description",
       "DisplayLength": 6,
       "DisplayLogic": "Display Logic",
@@ -35,19 +35,20 @@
       "IsMandatory": true,
       "IsParent": true,
       "IsRange": false,
-      "IsReadOnly": true,
+      "IsReadOnly": false,
       "IsTranslated": false,
       "IsUpdateable": true,
 
-      "Name": "Name Label Integer",
+      "Name": "Integer",
       "PreferedWidth": 100,
 
       "SeqNo": 0,
       "SortNo": 4,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
-      "ValueMin": 0,
-      "ValueMax": 10,
-      "VFormat": "dd-mm-yyy"
+      "ValueMin": null,
+      "ValueMax": null,
+      "Steps": 1,
+      "Decimals": 0
     }
 }
