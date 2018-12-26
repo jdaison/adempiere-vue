@@ -1,36 +1,35 @@
-
 <template>
-  <el-input-number v-model="num8" :min="data.ValueMin" :max="data.ValueMax" controls-position="right" @change="validateInput" />
+  <el-input-number
+    v-model="val"
+    :step="data.Steps"
+    :disabled="data.IsReadOnly"
+    :precision="data.Decimals"
+    :value="data.DefaultValue"
+    :min="data.ValueMin"
+    :max="data.ValueMax"/>
 </template>
-
 <script>
 export default {
-  name: 'ADInteger',
+  name: 'Integer',
   props: {
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {
     return {
-      num8: 1
+      val: 0
     }
   },
-  created() {
-    // if the ValueMax is not defined, it takes the default value of 10 digits
-    if (this.data.ValueMax === 0) { this.ValueMax = 9999999999 }
-  },
-  methods: {
-    validateInput(value) {
-      if (parseInt(value) > parseInt(this.data.ValueMax)) {
-        this.num8 = this.data.ValueMax
-      }
+  beforeMount() {
+    if (this.data.ValueMin == null) {
+      this.data.ValueMin = undefined
+    }
+    if (this.data.ValueMax == null) {
+      this.data.ValueMax = undefined
     }
   }
 }
 </script>
-
-<style>
-
-</style>
+<style></style>

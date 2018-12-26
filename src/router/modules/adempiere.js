@@ -56,7 +56,8 @@ const chartsRouter = {
     },
     {
       path: 'Integer',
-      component: () => import('@/components/ADempiere/Integer'),
+      // component: () => import('@/components/ADempiere/Integer'),
+      component: () => import('@/views/ADempiere/IntegerDemo'),
       name: 'Integer',
       meta: { title: 'Integer', noCache: true }
     },
