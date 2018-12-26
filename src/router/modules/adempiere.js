@@ -20,7 +20,7 @@ const chartsRouter = {
     },
     {
       path: 'amount',
-      component: () => import('@/components/ADempiere/Amount'),
+      component: () => import('@/views/ADempiere/Amount'),
       name: 'Amount',
       meta: { title: 'Amount', noCache: true }
     },
