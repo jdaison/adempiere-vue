@@ -13,11 +13,11 @@
 
 <script>
 export default {
-  name: 'ADDate',
+  name: 'Date',
   props: {
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {
@@ -54,6 +54,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,16 +1,18 @@
 
 <template>
-  <reference :data-attributes="data"/>
+  <div class="app-container">
+    <field :data-attributes="data" />
+  </div>
 </template>
 
 <script>
 import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Date.json'
-import Reference from '@/components/ADempiere/Reference'
+import Field from '@/components/ADempiere/Field'
 
 export default {
   name: 'DateDemo',
   components: {
-    Reference
+    Field
   },
   data() {
     return {
