@@ -20,7 +20,7 @@ const chartsRouter = {
     },
     {
       path: 'amount',
-      component: () => import('@/components/ADempiere/Amount'),
+      component: () => import('@/views/ADempiere/AmountDemo'),
       name: 'Amount',
       meta: { title: 'Amount', noCache: true }
     },
@@ -38,7 +38,7 @@ const chartsRouter = {
     },
     {
       path: 'date',
-      component: () => import('@/components/ADempiere/Date'),
+      component: () => import('@/views/ADempiere/DateDemo'),
       name: 'Date',
       meta: { title: 'Date', noCache: true }
     },
@@ -56,7 +56,8 @@ const chartsRouter = {
     },
     {
       path: 'Integer',
-      component: () => import('@/components/ADempiere/Integer'),
+      // component: () => import('@/components/ADempiere/Integer'),
+      component: () => import('@/views/ADempiere/IntegerDemo'),
       name: 'Integer',
       meta: { title: 'Integer', noCache: true }
     },

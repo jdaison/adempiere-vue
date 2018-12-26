@@ -1,7 +1,7 @@
 
 <template>
   <div class="app-container">
-    <fields :data-attributes="dataAttributes" />
+    <panel :data-attributes="dataAttributes" />
   </div>
 </template>
 
@@ -12,12 +12,12 @@ import jsonDate from '@/views/ADempiere/data/field/dataAttributes.Date.json'
 import jsonInteger from '@/views/ADempiere/data/field/dataAttributes.Integer.json'
 import jsonString from '@/views/ADempiere/data/field/dataAttributes.String.json'
 import jsonText from '@/views/ADempiere/data/field/dataAttributes.Text.json'
-import Fields from '@/components/ADempiere/Fields'
+import Panel from '@/components/ADempiere/Panel'
 
 export default {
   name: 'Dynamic',
   components: {
-    Fields
+    Panel
   },
   data() {
     return {

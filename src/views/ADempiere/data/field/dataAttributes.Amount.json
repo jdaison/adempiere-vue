@@ -1,7 +1,7 @@
 {
-  "type": "Date",
+  "type": "Amount",
   "data": {
-    "ID": 2,
+    "ID": 3,
     "AD_Reference_ID": 7,
     "AD_Reference_Value_ID": 8,
     "AD_Table_ID": 9,
@@ -13,7 +13,7 @@
     "ContextInfoFormatter": 0,
 
     "DefaultLogic": "Default Logic",
-    "DefaultValue": "Default Value",
+    "DefaultValue": 0,
     "Description": "Description",
     "DisplayLength": 6,
     "DisplayLogic": "Display Logic",
@@ -32,19 +32,21 @@
     "IsMandatory": true,
     "IsParent": true,
     "IsRange": false,
-    "IsReadOnly": true,
+    "IsReadOnly": false,
     "IsTranslated": false,
     "IsUpdateable": true,
 
-    "Name": "Name Label Date",
+    "Name": "Amount",
     "PreferedWidth": 100,
 
     "SeqNo": 0,
-    "SortNo": 0,
+    "SortNo": 4,
     "UUID": "Unique Universal Id",
     "ValidationCode": 0,
-    "ValueMin": 0,
-    "ValueMax": 15,
-    "VFormat": "DD-MM-yy"
+    "ValueMin": null,
+    "ValueMax": null,
+    "Decimals": 2,
+    "Steps": 1,
+    "VFormat": "mm-YYYY-ddd"
   }
 }

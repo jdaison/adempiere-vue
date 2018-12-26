@@ -1,37 +1,28 @@
-
-<!-- the :precision attribute indicating the decimal quantity -->
 <template>
-  <el-input-number v-model="val" :precision="data.Decimals" :min="data.ValueMin" :max="data.ValueMax" controls-position="right" @change="handleChange" @keyup.native="validatePattern" />
+  <el-input-number
+    v-model="val"
+    :precision="data.Decimals"
+    :step="data.Steps"
+    :disabled="data.IsReadOnly"
+    :value="data.DefaultValue"
+    :min="data.ValueMin"
+    :max="data.ValueMax"
+    controls-position="right"
+  />
 </template>
 
 <script>
 export default {
-  name: 'ADAmount',
+  name: 'Amount',
   props: {
     data: {
       type: Object,
-      default: () => ({
-        'ValueMin': 0,
-        'ValueMax': 10,
-        'Decimals': 2
-      })
+      required: true
     }
   },
   data() {
     return {
-      val: 1
-    }
-  },
-  methods: {
-    handleChange(value) {
-      const _Pattern = /[^0-9.]/g
-      this.val = value.target.value.replace(_Pattern, '')
-    },
-    validatePattern(value) {
-      console.log(value.target.value)
-      value = value.target.value.toString()
-      const _Pattern = /[^0-9.]/g
-      this.val = value.replace(_Pattern, '')
+      val: 0
     }
   }
 }

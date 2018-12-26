@@ -4,19 +4,20 @@
     <span class="demonstration">Default</span>
     <el-date-picker
       v-model="value1"
+      :format="data.VFormat"
       type="date"
       placeholder="Pick a day"
-      format="dd/MM/yyyy"/>
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ADDate',
+  name: 'Date',
   props: {
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {
@@ -53,6 +54,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
