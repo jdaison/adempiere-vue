@@ -8,10 +8,11 @@
       :precision="data.Decimals"
       :step="data.Steps"
       :disabled="data.IsReadOnly"
-      value="0"
+      :value="data.DefaultValue"
+      :min="data.ValueMin"
+      :max="data.ValueMax"
       controls-position="right"
-      @change="handleChange"
-      @keyup.native="validatePattern" />
+    />
   </div>
 </template>
 
@@ -32,21 +33,13 @@ export default {
       val: 0
     }
   },
-  methods: {
-    handleChange(value) {
-      const _Pattern = /[^0-9.]/g
-      const res = _Pattern.test(this.val)
-      if (res === true) {
-        this.val.replace(_Pattern, '')
-      }
-      /* this.val = value.target.value.replace(_Pattern, 'A')
-      console.log(value)*/
-    },
-    validatePattern(value) {
-      // console.log(value.target.value)
-      value = value.target.value.toString()
-      const _Pattern = /[^0-9.]/g
-      this.val = value.replace(_Pattern, '')
+
+  beforeMount() {
+    if (this.data.ValueMin == null) {
+      this.data.ValueMin = undefined
+    }
+    if (this.data.ValueMax == null) {
+      this.data.ValueMax = undefined
     }
   }
 }

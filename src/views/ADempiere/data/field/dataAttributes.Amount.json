@@ -43,8 +43,8 @@
       "SortNo": 4,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
-      "ValueMin": "",
-      "ValueMax": "",
+      "ValueMin": null,
+      "ValueMax": null,
       "DefaultValue": 0, 
       "Decimals": 2,
       "Steps": 1
