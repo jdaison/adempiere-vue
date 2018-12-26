@@ -49,10 +49,20 @@ export default {
     }
   },
   beforeMount() {
+    /*
     // if it is a range, it omits the minimum and the maximum value
     if (this.dataAttributes.data.IsRange) {
       this.dataAttributes.data.ValueMin = null
       this.dataAttributes.data.ValueMax = null
+    }
+    */
+    this.evaluateNULL()
+
+    if (this.dataAttributes.type === 'Date' && this.dataAttributes.type === 'DateTime') {
+      if (this.dataAttributes.data.VFormat.search(/[Y]/) !== -1) { this.dataAttributes.data.VFormat = this.dataAttributes.data.VFormat.replace(/[Y]/gi, 'y') }
+    }
+    if (this.dataAttributes.type === 'Date') {
+      if (this.dataAttributes.data.VFormat.search(/[m]/) !== -1) { this.dataAttributes.data.VFormat = this.dataAttributes.data.VFormat.replace(/[m]/gi, 'M') }
     }
   },
   methods: {
@@ -60,6 +70,18 @@ export default {
       this.componentLoader().then(comp => {
         console.log(comp.data)
       })
+    },
+    /*
+     + Evaluate the null data type to set it as undefined
+     */
+    evaluateNULL() {
+      var json = this.dataAttributes.data
+      for (const item in json) {
+        if (json[item] == null) {
+          json[item] = undefined
+        }
+      }
+      this.dataAttributes.data = json
     },
     /*
      * Evaluate by the ID and name of the reference to call the component type
