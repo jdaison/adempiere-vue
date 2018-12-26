@@ -1,3 +1,4 @@
+
 <template>
   <el-input-number
     v-model="val"
@@ -8,6 +9,7 @@
     :min="data.ValueMin"
     :max="data.ValueMax"/>
 </template>
+
 <script>
 export default {
   name: 'Integer',
@@ -21,15 +23,8 @@ export default {
     return {
       val: 0
     }
-  },
-  beforeMount() {
-    if (this.data.ValueMin == null) {
-      this.data.ValueMin = undefined
-    }
-    if (this.data.ValueMax == null) {
-      this.data.ValueMax = undefined
-    }
   }
 }
 </script>
+
 <style></style>
