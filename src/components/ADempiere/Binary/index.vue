@@ -27,11 +27,9 @@ export default {
   },
   methods: {
     handleRemove(file, fileList) {
-      // console.log(file, fileList)
       this.$message.success(`The previously uploaded file has been deleted.`)
     },
     handleSuccess(file) {
-      // console.log(file)
       this.$message.success(`The file has been successfully loaded.`)
     },
     handleError(file) {
