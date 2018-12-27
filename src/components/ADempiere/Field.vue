@@ -6,14 +6,14 @@
     placement="top" >
 
     <div>
-      <span v-if="dataAttributes.type.toLowerCase() != 'button'" class="demo-input-label" >
+      <span v-if="componentTypeRange.indexOf(dataAttributes.type) != -1" class="demo-input-label" >
         {{ dataAttributes.data.Name }}
       </span>
 
-      <component :is="componentLoader" :data="dataAttributes.data" />
+      <component :is="afterLoader" :data="dataAttributes.data" />
       <component
         v-if="dataAttributes.data.IsRange && componentTypeRange.includes(dataAttributes.type)"
-        :is="componentLoader"
+        :is="afterLoader"
         :data="dataAttributes.data" />
     </div>
   </el-tooltip>
@@ -43,33 +43,30 @@ export default {
   },
   computed: {
     // load the component that is indicated in the attributes of the received property
-    componentLoader() {
+    afterLoader() {
       var typeReference = this.evalutateType(this.dataAttributes.type)
       return () => import('./' + typeReference)
     }
   },
   beforeMount() {
-    /*
-    // if it is a range, it omits the minimum and the maximum value
-    if (this.dataAttributes.data.IsRange) {
-      this.dataAttributes.data.ValueMin = null
-      this.dataAttributes.data.ValueMax = null
-    }
-    */
     this.evaluateNULL()
-
-    if (this.dataAttributes.type === 'Date' && this.dataAttributes.type === 'DateTime') {
-      if (this.dataAttributes.data.VFormat.search(/[Y]/) !== -1) { this.dataAttributes.data.VFormat = this.dataAttributes.data.VFormat.replace(/[Y]/gi, 'y') }
-    }
-    if (this.dataAttributes.type === 'Date') {
-      if (this.dataAttributes.data.VFormat.search(/[m]/) !== -1) { this.dataAttributes.data.VFormat = this.dataAttributes.data.VFormat.replace(/[m]/gi, 'M') }
-    }
+    this.checkValueFormat()
   },
   methods: {
-    loadComponent() {
-      this.componentLoader().then(comp => {
-        console.log(comp.data)
-      })
+    /*
+     * Parse the date format to be compatible with element-ui
+     */
+    checkValueFormat() {
+      if (this.dataAttributes.type === 'Date' || this.dataAttributes.type === 'DateTime') {
+        if (this.dataAttributes.data.VFormat.search(/[Y]/) !== -1) {
+          this.dataAttributes.data.VFormat = this.dataAttributes.data.VFormat.replace(/[Y]/gi, 'y')
+        }
+      }
+      if (this.dataAttributes.type === 'Date') {
+        if (this.dataAttributes.data.VFormat.search(/[m]/) !== -1) {
+          this.dataAttributes.data.VFormat = this.dataAttributes.data.VFormat.replace(/[m]/gi, 'M')
+        }
+      }
     },
     /*
      + Evaluate the null data type to set it as undefined
@@ -85,9 +82,10 @@ export default {
     },
     /*
      * Evaluate by the ID and name of the reference to call the component type
+     * @param mixed typeComponent, received from data
+     * @return string type, assigned value to folder after evaluating the parameter
      */
     evalutateType(typeComponent) {
-      // variable to return with the assigned value after evaluating the parameter
       var type = ''
 
       switch (typeComponent) {

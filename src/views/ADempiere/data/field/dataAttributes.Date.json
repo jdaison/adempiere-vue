@@ -45,6 +45,6 @@
     "ValidationCode": 0,
     "ValueMin": 0,
     "ValueMax": 15,
-    "VFormat": "DD-MM-yy"
+    "VFormat": "DD-MM-yyyy"
   }
 }

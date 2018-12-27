@@ -3,7 +3,6 @@
     "type": "Button",
     "data": {
       "ID": 1,
-      "AD_Chart_ID": 2,
       "AD_Process_ID": 6,
       "AD_Reference_ID": 7,
       "AD_Reference_Value_ID": 8,
