@@ -7,24 +7,21 @@
     active-value="y"
     inactive-value="n"
     @change="handleChange(value)"/>
+
 </template>
 
 <script>
 export default {
-  name: 'ADYesNo',
+  name: 'Yes',
   props: {
-    value: {
-      type: String,
-      default: 'y'
-    },
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {
     return {
-      valueSwitch: 'y'
+      value: 'Y'
     }
   },
   methods: {
@@ -35,6 +32,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
