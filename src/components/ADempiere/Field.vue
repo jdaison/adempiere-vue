@@ -37,7 +37,7 @@ export default {
     return {
       typeField: this.dataAttributes.type,
       componentTypeRange: [
-        'Amount', 'Date', 'DateTime', 'Integer', 'Quantity', 'Time'
+        'Amount', 'Date', 'DateTime', 'Integer', 'Numbers', 'Quantity', 'Time'
       ]
     }
   },
@@ -171,6 +171,11 @@ export default {
         case 11:
         case 'Integer':
           type = 'Integer'
+          break
+
+        case 51:
+        case 'Numbers':
+          type = 'Numbers'
           break
 
         case 17:

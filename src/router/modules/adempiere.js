@@ -62,6 +62,12 @@ const chartsRouter = {
       meta: { title: 'Integer', noCache: true }
     },
     {
+      path: 'Number',
+      component: () => import('@/views/ADempiere/NumberDemo'),
+      name: 'Number',
+      meta: { title: 'Number', noCache: true }
+    },
+    {
       path: 'Quantity',
       component: () => import('@/components/ADempiere/Quantity'),
       name: 'Quantity',
@@ -87,7 +93,7 @@ const chartsRouter = {
     },
     {
       path: 'YesNo',
-      component: () => import('@/components/ADempiere/YesNo'),
+      component: () => import('@/views/ADempiere/YesNoDemo'),
       name: 'YesNo',
       meta: { title: 'Yes or No', noCache: true }
     }

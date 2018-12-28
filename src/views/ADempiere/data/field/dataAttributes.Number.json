@@ -1,0 +1,53 @@
+
+{
+    "type": "Number",
+    "data": {
+      "ID": 3,
+      "AD_Chart_ID": 1,
+      "AD_Process_ID": 6,
+      "AD_Reference_ID": 7,
+      "AD_Reference_Value_ID": 8,
+      "AD_Table_ID": 9,
+      "AD_Val_Rule_ID": 10,
+
+      "Callout": "odt",
+      "ColumnName": "Column Name",
+      "ContextInfoScript": 0,
+      "ContextInfoFormatter": 0,
+
+      "DefaultLogic": "Default Logic",
+      "DefaultValue": 0,
+      "Description": "Description",
+      "DisplayLength": 6,
+      "DisplayLogic": "Display Logic",
+      "DisplayType": "Display Type",
+      "FieldLength": 0,
+      "FormatPattern": 0,
+      "Help": "Help",
+
+      "InfoFactoryClass": 0,
+      "IsAllowCopy": true,
+      "IsAllowLogging": true,
+      "IsAlwaysUpdateable": false,
+      "IsEncrypted": true,
+      "IsFieldOnly": true,
+      "IsKey": true,
+      "IsMandatory": true,
+      "IsParent": true,
+      "IsRange": false,
+      "IsReadOnly": false,
+      "IsTranslated": false,
+      "IsUpdateable": true,
+
+      "Name": "Numbers",
+      "PreferedWidth": 100,
+
+      "SeqNo": 0,
+      "SortNo": 4,
+      "UUID": "Unique Universal Id",
+      "ValidationCode": 0,
+      "ValueMin": null,
+      "ValueMax": null,
+      "Steps": 1
+    }
+}
