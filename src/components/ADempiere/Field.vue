@@ -189,11 +189,6 @@ export default {
           type = 'Locator'
           break
 
-        case 34:
-        case 'Memo':
-          type = 'Memo'
-          break
-
         case 22:
         case 'Number':
           type = 'Number'
@@ -243,6 +238,8 @@ export default {
           break
 
         case 36:
+        case 34:
+        case 'Memo':
         case 'Text Long':
         case 'TextLong':
           type = 'TextLong'
