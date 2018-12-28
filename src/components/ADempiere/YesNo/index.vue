@@ -4,27 +4,23 @@
     v-model="value"
     active-text="Yes"
     inactive-text="Not"
-    active-value="y"
-    inactive-value="n"
+    active-value="Y"
+    inactive-value="N"
     @change="handleChange(value)"/>
 </template>
 
 <script>
 export default {
-  name: 'ADYesNo',
+  name: 'YesNo',
   props: {
-    value: {
-      type: String,
-      default: 'y'
-    },
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {
     return {
-      valueSwitch: 'y'
+      value: 'Y'
     }
   },
   methods: {
@@ -35,6 +31,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
