@@ -1,12 +1,11 @@
 <template>
   <el-upload
-    :limit="1"
-    :on-remove="handleRemove"
-    :on-error="handleError"
-    :on-success="handleSuccess"
+    :limit="data.Limit"
     :disabled="data.IsReadOnly"
-    list-type="picture"
-    class="upload-demo"
+    :on-remove="handleRemove"
+    :on-success="handleSuccess"
+    :on-error="handleError"
+    class="image-uploader"
     action="https://jsonplaceholder.typicode.com/posts/">
     <el-button size="small" type="primary">Upload File</el-button>
     <div slot="tip" class="el-upload__tip">Only files with a size smaller than 500kb</div>
@@ -26,14 +25,14 @@ export default {
     }
   },
   methods: {
-    handleRemove(file, fileList) {
+    handleRemove(file) {
       this.$message.success(`The previously uploaded file has been deleted.`)
-    },
-    handleSuccess(file) {
-      this.$message.success(`The file has been successfully loaded.`)
     },
     handleError(file) {
       this.$message.error(`The file does not meet the specifications.`)
+    },
+    handleSuccess(file) {
+      this.$message.success(`The file has been successfully loaded.`)
     }
   }
 }

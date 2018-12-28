@@ -48,6 +48,6 @@
       "ValidationCode": 0,
       "ValueMin": 1,
       "ValueMax": 100,
-      "VFormat": "dd-mm-yyy"
+      "Limit": 1
     }
 }
