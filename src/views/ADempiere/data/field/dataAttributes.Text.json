@@ -3,8 +3,6 @@
     "type": "String",
     "data": {
       "ID": 5,
-      "AD_Chart_ID": 1,
-      "AD_Process_ID": 6,
       "AD_Reference_ID": 7,
       "AD_Reference_Value_ID": 8,
       "AD_Table_ID": 9,
@@ -46,8 +44,6 @@
       "SortNo": 2,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
-      "ValueMin": 1,
-      "ValueMax": 100,
       "VFormat": "dd-mm-yyy"
     }
 }

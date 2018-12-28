@@ -3,8 +3,6 @@
     "type": "Integer",
     "data": {
       "ID": 3,
-      "AD_Chart_ID": 1,
-      "AD_Process_ID": 6,
       "AD_Reference_ID": 7,
       "AD_Reference_Value_ID": 8,
       "AD_Table_ID": 9,
