@@ -69,8 +69,8 @@ const chartsRouter = {
     },
     {
       path: 'Quantity',
-      component: () => import('@/components/ADempiere/Quantity'),
-      name: 'Quantity',
+      component: () => import('@/views/ADempiere/CostsPricesDemo'),
+      name: 'CostsPrices',
       meta: { title: 'CostsPrices', noCache: true }
     },
     {
