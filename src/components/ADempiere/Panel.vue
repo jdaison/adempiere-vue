@@ -1,11 +1,10 @@
 
 <template>
-  <div>
-    <div v-for="(item, key) in sortFields(dataAttributes)" :key="item.data.ID">
+  <el-form :label-position="labelPosition" label-width="200px">
+    <div v-for="(item, key) in sortFields(dataAttributes)" :key="item.data.ID" >
       <field :data-attributes="item" :data-key="key" />
-      <br>
     </div>
-  </div>
+  </el-form>
 </template>
 
 <script>
@@ -24,7 +23,8 @@ export default {
   },
   data() {
     return {
-      val: ''
+      val: '',
+      labelPosition: 'top'
     }
   },
   methods: {

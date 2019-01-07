@@ -28,7 +28,7 @@
       "IsAllowLogging": true,
       "IsAlwaysUpdateable": false,
       "IsEncrypted": true,
-      "IsFieldOnly": true,
+      "IsFieldOnly": false,
       "IsKey": true,
       "IsMandatory": true,
       "IsParent": true,

@@ -1,15 +1,11 @@
 <template>
-  <div>
-    <span v-if="componentTypeRange.indexOf(dataAttributes.type) != -1" class="demo-input-label" >
-      {{ dataAttributes.data.Name }}
-    </span>
-
+  <el-form-item v-if="dataAttributes.data.IsFieldOnly" >
     <component :is="afterLoader" :data="dataAttributes.data" />
-    <component
-      v-if="dataAttributes.data.IsRange && componentTypeRange.includes(dataAttributes.type)"
-      :is="afterLoader"
-      :data="dataAttributes.data" />
-  </div>
+  </el-form-item>
+
+  <el-form-item v-else :label="dataAttributes.data.Name">
+    <component :is="afterLoader" :data="dataAttributes.data" />
+  </el-form-item>
 </template>
 
 <script>
@@ -263,4 +259,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+  .el-form--label-top .el-form-item__label {
+    padding-bottom: 0px !important;
+  }
+</style>
