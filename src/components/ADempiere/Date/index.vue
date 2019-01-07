@@ -1,7 +1,7 @@
 
 <template>
   <div >
-    <span class="demonstration">Default</span>
+
     <el-date-picker
       v-model="value1"
       :format="data.VFormat"
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'ADDate',
+  name: 'Date',
   props: {
     data: {
       type: Object,
