@@ -1,42 +1,26 @@
-
 <template>
   <el-time-picker
-    v-model="setData.val"
+    v-model="data.DefaultValue"
+    :value-format="data.VFormat"
     :picker-options="{
-      selectableRange: range
-    }"
-    :editable="false"
-    :readonly="setData.isReadonly"
+    selectableRange: data.Range}"
+    :readonly="data.IsReadOnly"
     placeholder="Select time"/>
 </template>
-
 <script>
 export default {
-  name: 'ADTime',
+  name: 'Timepicker',
   props: {
     data: {
       type: Object,
-      default: () => ({})
-    },
-    setData: {
-      type: Object,
-      default: () => ({
-        val: new Date(),
-        min: '07:50:00',
-        max: '19:00:00',
-        isReadonly: false
-      })
+      required: true
     }
   },
   data() {
     return {
-      // '18:30:00 - 20:30:00' or ['09:30:00 - 12:00:00', '14:30:00 - 18:30:00']
-      range: this.setData.min + '-' + this.setData.max
+      // range: this.data.ValueMin + '-' + this.data.ValueMax
     }
   }
 }
 </script>
-
-<style>
-
-</style>
+<style></style>
