@@ -1,22 +1,15 @@
 <template>
-  <el-tooltip
-    :content="dataAttributes.type + ': ' + dataAttributes.data.Help + ', ' + dataAttributes.data.Description"
-    class="item"
-    effect="dark"
-    placement="top" >
+  <div>
+    <span v-if="componentTypeRange.indexOf(dataAttributes.type) != -1" class="demo-input-label" >
+      {{ dataAttributes.data.Name }}
+    </span>
 
-    <div>
-      <span v-if="componentTypeRange.indexOf(dataAttributes.type) != -1" class="demo-input-label" >
-        {{ dataAttributes.data.Name }}
-      </span>
-
-      <component :is="afterLoader" :data="dataAttributes.data" />
-      <component
-        v-if="dataAttributes.data.IsRange && componentTypeRange.includes(dataAttributes.type)"
-        :is="afterLoader"
-        :data="dataAttributes.data" />
-    </div>
-  </el-tooltip>
+    <component :is="afterLoader" :data="dataAttributes.data" />
+    <component
+      v-if="dataAttributes.data.IsRange && componentTypeRange.includes(dataAttributes.type)"
+      :is="afterLoader"
+      :data="dataAttributes.data" />
+  </div>
 </template>
 
 <script>

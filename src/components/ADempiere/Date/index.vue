@@ -1,14 +1,11 @@
 
 <template>
-  <div >
-    <span class="demonstration">Default</span>
-    <el-date-picker
-      v-model="value1"
-      :format="data.VFormat"
-      type="date"
-      placeholder="Pick a day"
-    />
-  </div>
+  <el-date-picker
+    v-model="value1"
+    :format="data.VFormat"
+    type="date"
+    placeholder="Pick a day"
+  />
 </template>
 
 <script>
