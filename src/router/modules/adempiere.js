@@ -62,6 +62,13 @@ const chartsRouter = {
       meta: { title: 'Integer', noCache: true }
     },
     {
+      path: 'Memo',
+      // component: () => import('@/components/ADempiere/Integer'),
+      component: () => import('@/views/ADempiere/MemoDemo'),
+      name: 'Memo',
+      meta: { title: 'Memo', noCache: true }
+    },
+    {
       path: 'Quantity',
       component: () => import('@/components/ADempiere/Quantity'),
       name: 'Quantity',
