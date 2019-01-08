@@ -1,6 +1,6 @@
-
+ 
 {
-    "type": "Imagen",
+    "type": "Image",
     "data": {
       "ID": 5,
       "AD_Chart_ID": 1,
@@ -9,6 +9,7 @@
       "AD_Reference_Value_ID": 8,
       "AD_Table_ID": 9,
       "AD_Val_Rule_ID": 10,
+      "Accept":"gif",
 
       "Callout": "odt",
       "ColumnName": "Column Name",
@@ -25,6 +26,7 @@
       "FormatPattern": 0,
       "Help": "Help",
 
+      "ImageURL": "",
       "InfoFactoryClass": 0,
       "IsAllowCopy": true,
       "IsAllowLogging": true,

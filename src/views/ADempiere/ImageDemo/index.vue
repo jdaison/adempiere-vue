@@ -1,11 +1,14 @@
+
 <template>
   <div class="app-container">
     <field :data-attributes="data"/>
   </div>
 </template>
+
 <script>
-import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Imagen.json'
+import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Image.json'
 import Field from '@/components/ADempiere/Field'
+
 export default {
   name: 'ImagenDemo',
   components: {
@@ -31,4 +34,3 @@ export default {
   }
 }
 </script>
-<style></style>

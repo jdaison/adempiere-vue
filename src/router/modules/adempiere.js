@@ -55,10 +55,10 @@ const chartsRouter = {
       meta: { title: 'File Path Or Name', noCache: true }
     },
     {
-      path: 'Imagen',
-      component: () => import('@/views/ADempiere/ImagenDemo'),
-      name: 'Imagen',
-      meta: { title: 'Imagen', noCache: true }
+      path: 'Image',
+      component: () => import('@/views/ADempiere/ImageDemo'),
+      name: 'Image',
+      meta: { title: 'Image', noCache: true }
     },
     {
       path: 'Integer',
