@@ -1,12 +1,19 @@
-
 <template>
   <el-form :label-position="labelPosition" label-width="200px">
-    <div v-for="(item, key) in sortFields(dataAttributes)" :key="item.data.ID" >
-      <field :data-attributes="item" :data-key="key" />
-    </div>
+    <el-row :gutter="20">
+      <el-col :span="12">
+        <el-card shadow="hover" header="hola">
+          <field v-for="(item, key) in dataAttributes" :key="item.data.ID" :data-attributes="item" :data-key="key" />
+        </el-card>
+      </el-col>
+      <el-col :span="12">
+        <el-card shadow="hover">
+          <field v-for="(item, key) in dataAttributes" :key="item.data.ID" :data-attributes="item" :data-key="key" />
+        </el-card>
+      </el-col>
+    </el-row>
   </el-form>
 </template>
-
 <script>
 import Field from '@/components/ADempiere/Field'
 
