@@ -1,13 +1,19 @@
-
 <template>
-  <div>
-    <div v-for="(item, key) in sortFields(dataAttributes)" :key="item.data.ID">
-      <field :data-attributes="item" :data-key="key" />
-      <br>
-    </div>
-  </div>
+  <el-form :label-position="labelPosition" label-width="200px">
+    <el-row :gutter="20">
+      <el-col :span="12">
+        <el-card shadow="hover" header="hola">
+          <field v-for="(item, key) in dataAttributes" :key="item.data.ID" :data-attributes="item" :data-key="key" />
+        </el-card>
+      </el-col>
+      <el-col :span="12">
+        <el-card shadow="hover">
+          <field v-for="(item, key) in dataAttributes" :key="item.data.ID" :data-attributes="item" :data-key="key" />
+        </el-card>
+      </el-col>
+    </el-row>
+  </el-form>
 </template>
-
 <script>
 import Field from '@/components/ADempiere/Field'
 
@@ -24,14 +30,15 @@ export default {
   },
   data() {
     return {
-      val: ''
+      val: '',
+      labelPosition: 'top'
     }
   },
   methods: {
     /*
-     * Sorts the components according to the value that is obtained from the
-     * array that contains the JSON objects in the data.SortNo property
-     */
+       * Sorts the components according to the value that is obtained from the
+       * array that contains the JSON objects in the data.SortNo property
+       */
     sortFields(arr) {
       // Set slice() to avoid to generate an infinite loop!
       return arr.slice().sort(function(a, b) {

@@ -29,6 +29,7 @@
       "IsParent": true,
       "IsRange": true,
       "IsReadOnly": true,
+      "IsSameLine": true,
       "IsTranslated": false,
       "IsUpdateable": true,
 

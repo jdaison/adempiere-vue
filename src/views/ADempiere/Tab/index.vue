@@ -1,27 +1,26 @@
 
 <template>
   <div class="app-container">
-    <panel :data-attributes="dataAttributes" />
+    <tab id="1" :data-attributes="dataAttributes" :tab-name="tabName" />
   </div>
 </template>
 
 <script>
-/* json response prototype with attributes of the field and column */
 import jsonButton from '@/views/ADempiere/data/field/dataAttributes.Button.json'
 import jsonDate from '@/views/ADempiere/data/field/dataAttributes.Date.json'
 import jsonInteger from '@/views/ADempiere/data/field/dataAttributes.Integer.json'
 import jsonString from '@/views/ADempiere/data/field/dataAttributes.String.json'
 import jsonText from '@/views/ADempiere/data/field/dataAttributes.Text.json'
-import Panel from '@/components/ADempiere/Panel'
+import Tab from '@/components/ADempiere/Tab'
 
 export default {
-  name: 'Dynamic',
+  name: 'TabDemo',
   components: {
-    Panel
+    Tab
   },
   data() {
     return {
-      val: '',
+      tabName: 'Test',
       dataAttributes: [
         jsonText,
         jsonInteger,
