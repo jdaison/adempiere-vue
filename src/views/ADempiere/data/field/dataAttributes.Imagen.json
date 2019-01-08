@@ -1,6 +1,6 @@
 
-{ 
-    "type": "Image",
+{
+    "type": "Imagen",
     "data": {
       "ID": 5,
       "AD_Chart_ID": 1,
@@ -39,7 +39,7 @@
       "IsTranslated": false,
       "IsUpdateable": true,
 
-      "Name": "Image",
+      "Name": "Imagen",
       "PreferedWidth": 100,
 
       "SeqNo": 0,

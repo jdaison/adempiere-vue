@@ -3,7 +3,6 @@
   <el-upload
     :on-preview="handlePreview"
     :on-remove="handleRemove"
-    :file-list="fileList2"
     class="upload-demo"
     action="https://jsonplaceholder.typicode.com/posts/"
     list-type="picture">

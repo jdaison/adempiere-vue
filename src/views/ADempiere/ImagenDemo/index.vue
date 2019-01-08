@@ -4,10 +4,10 @@
   </div>
 </template>
 <script>
-import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Image.json'
+import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Imagen.json'
 import Field from '@/components/ADempiere/Field'
 export default {
-  name: 'ImageDemo',
+  name: 'ImagenDemo',
   components: {
     Field
   },
