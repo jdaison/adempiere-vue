@@ -13,7 +13,6 @@
       "ContextInfoFormatter": 0,
   
       "DefaultLogic": "Default Logic",
-      "DefaultValue": "Default Value",
       "Description": "Description",
       "DisplayLength": 6,
       "DisplayLogic": "Display Logic",
@@ -44,10 +43,12 @@
       "SortNo": 0,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
-      "ValueMin": "2019-01-06 08:20:10",
-      "ValueMax": "2019-01-09 11:59:59",
-      "Range": ["2019-01-01 - 2019-01-10"],
-      "VFormat": "dd-MM-yyyy  HH:mm:ss"
+      "ValueMin": "2019-01-06 ",
+      "ValueMax": "2019-01-09 ",
+      "Range": ["2019-01-06 - 2019-01-09", "13:30:00 - 18:00:00"],
+      "VFormat": "dd-MM-yyyy  HH:mm:ss",
+      "DefaultValue": 0
+
     }
   }
   

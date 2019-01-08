@@ -1,15 +1,14 @@
 <template>
   <div class="block">
     <el-date-picker
-      v-model="date"
+      v-model="data.DefaultValue"
       :value-format="data.VFormat"
-      :picker-options="{
-      selectableRange: data.Range}"
-      :readonly="data.IsReadOnly"
-      type="datetime"
+      :min="data.ValueMin"
+      :picker-options="pickerOptions1"
+      :range="data.Range"
+      type="datetimerange"
       placeholder="Select date and time"
     />
-
   </div>
 </template>
 
@@ -24,8 +23,12 @@ export default {
   },
   data() {
     return {
-      date: ''
-      // range: this.data.ValueMin + '-' + this.data.ValueMax
+      pickerOptions1: {
+        disabledDate(range) {
+          return range.getTime() < Date.now()
+        }
+      }
+      // range: this.data.ValueMin + '=' + this.data.ValueMax
     }
   }
 }
