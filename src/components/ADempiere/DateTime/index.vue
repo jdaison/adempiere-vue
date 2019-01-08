@@ -1,11 +1,11 @@
 <template>
   <div class="block">
     <el-date-picker
-      v-model="setData.val"
+      v-model="date"
+      :value-format="data.VFormat"
       :picker-options="{
-      selectableRange: range}"
-
-      :format="data.V"
+      selectableRange: data.Range}"
+      :readonly="data.IsReadOnly"
       type="datetime"
       placeholder="Select date and time"
     />
@@ -22,17 +22,10 @@ export default {
       required: true
     }
   },
-  setData: {
-    type: Object,
-    default: () => ({
-      val: new Date(),
-      min: '2019-01-01 ',
-      max: '2019-01-10'
-    })
-  },
   data() {
     return {
-      range: this.setData.min + '-' + this.setData.max
+      date: ''
+      // range: this.data.ValueMin + '-' + this.data.ValueMax
     }
   }
 }
