@@ -47,7 +47,7 @@
       "ValueMax": "2019-01-09 ",
       "Range": ["2019-01-06 - 2019-01-09", "13:30:00 - 18:00:00"],
       "VFormat": "dd-MM-yyyy  HH:mm:ss",
-      "DefaultValue": 0
+      "DefaultValue": ""
 
     }
   }
