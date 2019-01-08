@@ -26,7 +26,7 @@ const chartsRouter = {
     },
     {
       path: 'binary',
-      component: () => import('@/components/ADempiere/Binary'),
+      component: () => import('@/views/ADempiere/BinaryDemo'),
       name: 'Binary',
       meta: { title: 'Binary', noCache: true }
     },
