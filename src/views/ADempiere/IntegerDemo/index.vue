@@ -1,8 +1,8 @@
 
 <template>
-  <div class="app-container">
+  <el-form class="app-container">
     <field :data-attributes="data" />
-  </div>
+  </el-form>
 </template>
 
 <script>

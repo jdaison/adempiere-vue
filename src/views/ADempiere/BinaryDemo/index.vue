@@ -1,8 +1,9 @@
 <template>
-  <div class="app-container">
+  <el-form class="app-container">
     <field :data-attributes="data"/>
-  </div>
+  </el-form>
 </template>
+
 <script>
 import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Binary.json'
 import Field from '@/components/ADempiere/Field'
@@ -31,4 +32,3 @@ export default {
   }
 }
 </script>
-<style></style>

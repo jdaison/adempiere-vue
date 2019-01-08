@@ -1,8 +1,8 @@
 
 <template>
-  <div class="app-container">
+  <el-form class="app-container">
     <field :data-attributes="data" />
-  </div>
+  </el-form>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ import dataJson from '@/views/ADempiere/data/field/dataAttributes.YesNo.json'
 import Field from '@/components/ADempiere/Field.vue'
 
 export default {
-  name: 'YesnoDemo',
+  name: 'YesNoDemo',
   components: {
     Field
   },
@@ -23,5 +23,3 @@ export default {
   }
 }
 </script>
-
-<style></style>

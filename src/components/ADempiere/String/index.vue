@@ -1,13 +1,11 @@
 
 <template>
-  <div>
-    <el-input v-model="input" placeholder="Please input"/>
-  </div>
+  <el-input v-model="input" placeholder="Please input"/>
 </template>
 
 <script>
 export default {
-  name: 'ADString',
+  name: 'String',
   props: {
     data: {
       type: Object,

@@ -14,7 +14,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'ContextVariablesLayout',
   components: {
@@ -32,10 +31,10 @@ export default {
 
   mounted() {
     /*
-     * And if we want to access the information of localStorage sequentially,
-     * then we do it thanks to its 'key' method that returns the key in a
-     * certain position
-     */
+       * And if we want to access the information of localStorage sequentially,
+       * then we do it thanks to its 'key' method that returns the key in a
+       * certain position
+       */
     for (let i = 0, key = ''; i < localStorage.length; i++) {
       key = localStorage.key(i)
       console.log(key + ': ' + localStorage.getItem(localStorage.key(i)))
@@ -52,8 +51,8 @@ export default {
       alert('Test')
     },
     /*
-     * Clear the SessionStorage and therefore the context variables
-     */
+       * Clear the SessionStorage and therefore the context variables
+       */
     clearSessionStorage() {
       sessionStorage.clear()
     },

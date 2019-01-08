@@ -99,7 +99,7 @@ const chartsRouter = {
     },
     {
       path: 'YesNo',
-      component: () => import('@/components/ADempiere/YesNo'),
+      component: () => import('@/views/ADempiere/YesNoDemo'),
       name: 'YesNo',
       meta: { title: 'Yes or No', noCache: true }
     }

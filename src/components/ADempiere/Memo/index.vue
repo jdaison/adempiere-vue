@@ -1,19 +1,16 @@
 
 <template>
-  <div>
-    <el-input
-      v-model="input"
-      :autosize="{ minRows: 2, maxRows: 4}"
-      type="textarea"
-      placeholder="A description is limited to 255 characters."/>
-  </div>
+  <el-input
+    v-model="input"
+    :autosize="{ minRows: 2, maxRows: 4}"
+    type="textarea"
+    placeholder="A description or long text."/>
 </template>
 
 <script>
 export default {
   name: 'Memo',
   props: {
-
     data: {
       type: Object,
       required: true
@@ -26,7 +23,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

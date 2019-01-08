@@ -11,6 +11,7 @@
     <div slot="tip" class="el-upload__tip">Only files with a size smaller than 500kb</div>
   </el-upload>
 </template>
+
 <script>
 export default {
   name: 'Binary',
@@ -37,4 +38,3 @@ export default {
   }
 }
 </script>
-<style></style>
