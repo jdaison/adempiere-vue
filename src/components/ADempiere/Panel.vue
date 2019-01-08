@@ -29,9 +29,9 @@ export default {
   },
   methods: {
     /*
-     * Sorts the components according to the value that is obtained from the
-     * array that contains the JSON objects in the data.SortNo property
-     */
+       * Sorts the components according to the value that is obtained from the
+       * array that contains the JSON objects in the data.SortNo property
+       */
     sortFields(arr) {
       // Set slice() to avoid to generate an infinite loop!
       return arr.slice().sort(function(a, b) {
