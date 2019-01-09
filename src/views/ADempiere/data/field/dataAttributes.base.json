@@ -3,6 +3,7 @@
     "type": "",
     "data": {
       "AD_Reference_ID": 7,
+      "AD_Field_Group": null,
       "ID": 2,
       "Callout": "odt",
       "ColumnName": "Column Name",

@@ -4,6 +4,7 @@
     "data": {
       "ID": 3,
       "AD_Reference_ID": 7,
+      "AD_Field_Group": null,
       "AD_Reference_Value_ID": 8,
       "AD_Table_ID": 9,
       "AD_Val_Rule_ID": 10,
