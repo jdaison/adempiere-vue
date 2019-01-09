@@ -10,9 +10,9 @@
 
 <script>
 /*
- * This is the base component for linking the components according to the
- * reference (or type of visualization) of each field
- */
+   * This is the base component for linking the components according to the
+   * reference (or type of visualization) of each field
+   */
 export default {
   name: 'Field',
   props: {
@@ -43,8 +43,8 @@ export default {
   },
   methods: {
     /*
-     * Parse the date format to be compatible with element-ui
-     */
+       * Parse the date format to be compatible with element-ui
+       */
     checkValueFormat() {
       if (this.dataAttributes.type === 'Date' || this.dataAttributes.type === 'DateTime') {
         if (this.dataAttributes.data.VFormat.search(/[Y]/) !== -1) {
@@ -58,8 +58,8 @@ export default {
       }
     },
     /*
-     + Evaluate the null data type to set it as undefined
-     */
+       + Evaluate the null data type to set it as undefined
+       */
     evaluateNULL() {
       var json = this.dataAttributes.data
       for (const item in json) {
@@ -70,10 +70,10 @@ export default {
       this.dataAttributes.data = json
     },
     /*
-     * Evaluate by the ID and name of the reference to call the component type
-     * @param mixed typeComponent, received from data
-     * @return string type, assigned value to folder after evaluating the parameter
-     */
+       * Evaluate by the ID and name of the reference to call the component type
+       * @param mixed typeComponent, received from data
+       * @return string type, assigned value to folder after evaluating the parameter
+       */
     evalutateType(typeComponent) {
       var type = ''
 
@@ -260,7 +260,17 @@ export default {
 </script>
 
 <style>
+  /*
+   * Reduce the spacing between the form element and its label
+   */
   .el-form--label-top .el-form-item__label {
     padding-bottom: 0px !important;
+  }
+
+  /*
+   * Separation between elements (item) of the form
+   */
+  .el-form-item {
+    margin-bottom: 10px !important;
   }
 </style>
