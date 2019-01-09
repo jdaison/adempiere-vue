@@ -20,17 +20,6 @@ export default {
         ...dataJSON
       }
     }
-  },
-  methods: {
-    handleRemove(file, fileList) {
-      this.$message.success(`The previously uploaded file has been deleted.`)
-    },
-    handleSuccess(file) {
-      this.$message.success(`The file has been successfully loaded.`)
-    },
-    handleError(file) {
-      this.$message.error(`The file does not meet the specifications.`)
-    }
   }
 }
 </script>

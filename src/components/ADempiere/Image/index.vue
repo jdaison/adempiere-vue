@@ -1,8 +1,12 @@
 <template>
   <el-upload
+    :image="data.ImageURL"
+    :limit="data.Limit"
+    :dra="data.Drag"
     :before-upload="beforeAvatarUpload"
     :on-preview="handlePreview"
     :on-remove="handleRemove"
+    :on-exceed="handleExceed"
     class="upload-demo"
     action="https://jsonplaceholder.typicode.com/posts/"
     list-type="picture">
@@ -49,6 +53,10 @@ export default {
 
     handlePreview(file) {
       console.log(file)
+    },
+
+    handleExceed(files, fileList) {
+      this.$message.warning(`you have reached the limit of images allowed ${files.length}   `)
     }
   }
 

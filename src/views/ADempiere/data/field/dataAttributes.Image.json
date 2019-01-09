@@ -15,7 +15,7 @@
       "ColumnName": "Column Name",
       "ContextInfoScript": 0,
       "ContextInfoFormatter": 0,
-
+      "Drag": true,
       "DefaultLogic": "Default Logic",
       "DefaultValue": "Default Value",
       "Description": "Description",
@@ -50,6 +50,6 @@
       "ValidationCode": 0,
       "ValueMin": 1,
       "ValueMax": 100,
-      "Limit": 1
+      "Limit": 3
     }
 }
