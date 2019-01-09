@@ -27,7 +27,7 @@
     "IsAllowLogging": true,
     "IsAlwaysUpdateable": false,
     "IsEncrypted": true,
-    "IsFieldOnly": true,
+    "IsFieldOnly": false,
     "IsKey": true,
     "IsMandatory": true,
     "IsParent": true,
@@ -46,7 +46,6 @@
     "ValueMin": null,
     "ValueMax": null,
     "Decimals": 2,
-    "Steps": 1,
-    "VFormat": "mm-YYYY-ddd"
+    "Steps": 1
   }
 }

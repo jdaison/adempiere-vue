@@ -20,7 +20,7 @@ const chartsRouter = {
     },
     {
       path: 'TabDemo',
-      component: () => import('@/views/ADempiere/Tab'),
+      component: () => import('@/views/ADempiere/TabDemo'),
       name: 'TabDemo',
       meta: { title: 'Tab Component', noCache: true }
     },

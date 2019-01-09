@@ -1,12 +1,14 @@
 
 <template>
-  <el-tabs type="border-card" @tab-click="handleClick">
-    <el-tab-pane :label="tabName">
-      <panel :data-attributes="dataAttributes" />
+  <el-tabs v-model="activeTab" :tab-position="tabPosition" type="border-card" @tab-click="handleClick">
+    <el-tab-pane
+      v-for="(item, key) in dataTabs"
+      :label="item.nameTab"
+      :name="item.nameTab"
+      :id_tab="item.ID_Tab"
+      :key="key" >
+      <panel :data-attributes="item.dataAttributes" />
     </el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Role</el-tab-pane>
-    <el-tab-pane label="Task">Task</el-tab-pane>
   </el-tabs>
 </template>
 
@@ -14,29 +16,28 @@
 import Panel from '@/components/ADempiere/Panel'
 
 export default {
-  name: 'TabComponent',
+  name: 'TabADempiere',
   components: {
     Panel
   },
   props: {
-    // receives the property that is an object with all the attributes
-    dataAttributes: {
+    // Receives the property that is an object with all the attributes
+    dataTabs: {
       type: Array,
-      required: true
-    },
-    tabName: {
-      type: String,
       required: true
     }
   },
   data() {
     return {
-      activeName: 'first'
+      // Defines the first tab received as active
+      activeTab: this.dataTabs[0].nameTab,
+      tabPosition: 'top'
     }
   },
   methods: {
     handleClick(tab, event) {
-      console.log(tab, event)
+      // alert(tab.$el.attributes.id_tab.value)
+      console.log(tab.$el.attributes.id_tab.value)
     }
   }
 }
