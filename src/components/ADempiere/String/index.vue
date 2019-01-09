@@ -1,15 +1,18 @@
-
 <template>
-  <el-input v-model="input" placeholder="Please input"/>
+  <el-input
+    v-model="input"
+    :minlength="data.MinLength"
+    :maxlength="data.MaxLength"
+    :readonly="data.IsReadOnly"
+    placeholder="Please input"/>
 </template>
-
 <script>
 export default {
   name: 'String',
   props: {
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {

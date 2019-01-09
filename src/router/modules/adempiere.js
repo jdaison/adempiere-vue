@@ -81,7 +81,7 @@ const chartsRouter = {
     },
     {
       path: 'String',
-      component: () => import('@/components/ADempiere/String'),
+      component: () => import('@/views/ADempiere/StringDemo'),
       name: 'String',
       meta: { title: 'String', noCache: true }
     },

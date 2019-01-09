@@ -1,6 +1,6 @@
 
 {
-    "type": "Text",
+    "type": "String",
     "data": {
       "ID": 4,
       "AD_Reference_ID": 7,
@@ -37,13 +37,15 @@
       "IsTranslated": false,
       "IsUpdateable": true,
 
-      "Name": "Name Label Text",
+      "Name": "String",
       "PreferedWidth": 100,
 
       "SeqNo": 0,
       "SortNo": 0,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
+      "MinLength": 2,
+      "MaxLength": 5,
       "VFormat": "dd-mm-yyy"
     }
 }
