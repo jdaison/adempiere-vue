@@ -55,6 +55,12 @@ const chartsRouter = {
       meta: { title: 'Date Time', noCache: true }
     },
     {
+      path: 'FileName',
+      component: () => import('@/views/ADempiere/FileNameDemo'),
+      name: 'FileName',
+      meta: { title: 'FileName', noCache: true }
+    },
+    {
       path: 'filePathOrName',
       component: () => import('@/components/ADempiere/FilePathOrName'),
       name: 'FilePathOrName',

@@ -26,7 +26,7 @@ export default {
     return {
       typeField: this.dataAttributes.type,
       componentTypeRange: [
-        'Amount', 'Date', 'DateTime', 'Integer', 'Quantity', 'Time', 'Yesno', 'CostsPrices', 'String'
+        'Amount', 'Date', 'DateTime', 'Integer', 'Quantity', 'Time', 'Yesno', 'CostsPrices', 'String', 'FileName'
       ]
     }
   },
