@@ -25,6 +25,12 @@ const chartsRouter = {
       meta: { title: 'Tab Component', noCache: true }
     },
     {
+      path: 'List',
+      component: () => import('@/views/ADempiere/ListDemo'),
+      name: 'List',
+      meta: { title: 'List', noCache: true }
+    },
+    {
       path: 'amount',
       component: () => import('@/views/ADempiere/AmountDemo'),
       name: 'Amount',
