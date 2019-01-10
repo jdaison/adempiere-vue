@@ -45,8 +45,8 @@
       "SortNo": 0,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
-      "MinLength": 2,
-      "MaxLength": 5,
+      "MinLength": 0,
+      "MaxLength": 200,
       "VFormat": "dd-mm-yyy"
     }
 }

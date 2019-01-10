@@ -26,7 +26,7 @@ export default {
     return {
       typeField: this.dataAttributes.type,
       componentTypeRange: [
-        'Amount', 'Date', 'DateTime', 'Integer', 'Quantity', 'Time', 'Yesno', 'CostsPrices', 'String', 'FileName'
+        'Amount', 'Date', 'DateTime', 'Integer', 'Quantity', 'Time', 'CostsPrices'
       ]
     }
   },
@@ -34,7 +34,7 @@ export default {
     // load the component that is indicated in the attributes of the received property
     afterLoader() {
       var typeReference = this.evalutateType(this.dataAttributes.type)
-      return () => import('./' + typeReference)
+      return () => import('./' + typeReference + '/')
     }
   },
   beforeMount() {
