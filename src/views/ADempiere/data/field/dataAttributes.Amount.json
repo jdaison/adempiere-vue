@@ -1,7 +1,10 @@
+
 {
   "type": "Amount",
   "data": {
     "ID": 3,
+    "AD_GroupField": 20,
+    "GroupField": "B",
     "AD_Reference_ID": 7,
     "AD_Reference_Value_ID": 8,
     "AD_Table_ID": 9,
@@ -27,7 +30,7 @@
     "IsAllowLogging": true,
     "IsAlwaysUpdateable": false,
     "IsEncrypted": true,
-    "IsFieldOnly": true,
+    "IsFieldOnly": false,
     "IsKey": true,
     "IsMandatory": true,
     "IsParent": true,
@@ -40,7 +43,7 @@
     "PreferedWidth": 100,
 
     "SeqNo": 0,
-    "SortNo": 4,
+    "SortNo": 80,
     "UUID": "Unique Universal Id",
     "ValidationCode": 0,
     "ValueMin": null,

@@ -1,8 +1,10 @@
 
 {
-    "type": "Text",
+    "type": "String",
     "data": {
-      "ID": 4,
+      "ID": 5,
+      "AD_GroupField": 0,
+      "GroupField": "",
       "AD_Reference_ID": 7,
       "AD_Reference_Value_ID": 8,
       "AD_Table_ID": 9,
@@ -37,7 +39,7 @@
       "IsTranslated": false,
       "IsUpdateable": true,
 
-      "Name": "Name Label Text",
+      "Name": "String",
       "PreferedWidth": 100,
 
       "SeqNo": 0,

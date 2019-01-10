@@ -1,8 +1,10 @@
 
 {
-    "type": "String",
+    "type": "Text",
     "data": {
-      "ID": 5,
+      "ID": 6,
+      "AD_GroupField": 0,
+      "GroupField": "",
       "AD_Reference_ID": 7,
       "AD_Reference_Value_ID": 8,
       "AD_Table_ID": 9,
@@ -37,11 +39,11 @@
       "IsTranslated": false,
       "IsUpdateable": true,
 
-      "Name": "Name Label Text",
+      "Name": "Text",
       "PreferedWidth": 100,
 
       "SeqNo": 0,
-      "SortNo": 2,
+      "SortNo": 0,
       "UUID": "Unique Universal Id",
       "ValidationCode": 0,
       "VFormat": "dd-mm-yyy"
