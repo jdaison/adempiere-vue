@@ -6,8 +6,8 @@
     :disabled="data.IsReadOnly"
     :precision="data.Decimals"
     :value="data.DefaultValue"
-    :min="data.ValueMin"
-    :max="data.ValueMax"/>
+    :min="parseInt(data.ValueMin)"
+    :max="parseInt(data.ValueMax)"/>
 </template>
 
 <script>

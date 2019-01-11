@@ -4,7 +4,7 @@
     "data": {
       "ID": 5,
       "AD_GroupField": 0,
-      "GroupField": "",
+      "GroupField": "0",
       "AD_Reference_ID": 7,
       "AD_Reference_Value_ID": 8,
       "AD_Table_ID": 9,

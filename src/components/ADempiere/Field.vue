@@ -2,13 +2,13 @@
   <!-- If it is marked as a single field or it is within the componentFieldOnly
     set, it will not display the label associated with the field -->
   <el-form-item
-    v-if="dataAttributes.data.IsFieldOnly === true ||
+    v-if="dataAttributes.IsFieldOnly === true ||
     componentFieldOnly.indexOf(typeField) !== -1" >
-    <component :is="afterLoader" :data="dataAttributes.data" />
+    <component :is="afterLoader" :data="dataAttributes" />
   </el-form-item>
   <!-- On the contrary show the label associated with the column -->
-  <el-form-item v-else :label="dataAttributes.data.Name">
-    <component :is="afterLoader" :data="dataAttributes.data" />
+  <el-form-item v-else :label="dataAttributes.Name">
+    <component :is="afterLoader" :data="dataAttributes" />
   </el-form-item>
 </template>
 
@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      typeField: this.dataAttributes.type,
+      typeField: this.dataAttributes.DisplayType,
       componentTypeRange: [
         'Amount', 'Date', 'DateTime', 'Integer', 'Quantity', 'Time', 'Yesno'
       ],
@@ -40,12 +40,14 @@ export default {
   computed: {
     // load the component that is indicated in the attributes of the received property
     afterLoader() {
-      var typeReference = this.evalutateType(this.dataAttributes.type)
+      var typeReference = this.evalutateType(this.dataAttributes.DisplayType)
       return () => import('./' + typeReference)
     }
   },
   beforeMount() {
     this.evaluateNULL()
+    this.evaluateFalse()
+    this.evaluateTrue()
     this.checkValueFormat()
   },
   methods: {
@@ -53,14 +55,14 @@ export default {
      * Parse the date format to be compatible with element-ui
      */
     checkValueFormat() {
-      if (this.dataAttributes.type === 'Date' || this.dataAttributes.type === 'DateTime') {
-        if (this.dataAttributes.data.VFormat.search(/[Y]/) !== -1) {
-          this.dataAttributes.data.VFormat = this.dataAttributes.data.VFormat.replace(/[Y]/gi, 'y')
+      if (this.dataAttributes.DisplayType === 'Date' || this.dataAttributes.DisplayType === 'DateTime') {
+        if (this.dataAttributes.VFormat.search(/[Y]/) !== -1) {
+          this.dataAttributes.VFormat = this.dataAttributes.VFormat.replace(/[Y]/gi, 'y')
         }
       }
-      if (this.dataAttributes.type === 'Date') {
-        if (this.dataAttributes.data.VFormat.search(/[m]/) !== -1) {
-          this.dataAttributes.data.VFormat = this.dataAttributes.data.VFormat.replace(/[m]/gi, 'M')
+      if (this.dataAttributes.DisplayType === 'Date') {
+        if (this.dataAttributes.VFormat.search(/[m]/) !== -1) {
+          this.dataAttributes.VFormat = this.dataAttributes.VFormat.replace(/[m]/gi, 'M')
         }
       }
     },
@@ -68,13 +70,37 @@ export default {
      + Evaluate the null data type to set it as undefined
      */
     evaluateNULL() {
-      var json = this.dataAttributes.data
+      var json = this.dataAttributes
       for (const item in json) {
         if (json[item] == null) {
           json[item] = undefined
         }
       }
-      this.dataAttributes.data = json
+      this.dataAttributes = json
+    },
+    /**
+     + Evaluate the false data type to set it as undefined
+     */
+    evaluateFalse() {
+      var json = this.dataAttributes
+      for (const item in json) {
+        if (json[item] === 'N') {
+          json[item] = false
+        }
+      }
+      this.dataAttributes = json
+    },
+    /**
+     + Evaluate the false data type to set it as undefined
+     */
+    evaluateTrue() {
+      var json = this.dataAttributes
+      for (const item in json) {
+        if (json[item] === 'Y') {
+          json[item] = true
+        }
+      }
+      this.dataAttributes = json
     },
     /**
      * Evaluate by the ID and name of the reference to call the component type
@@ -155,11 +181,13 @@ export default {
         case 13:
         case 'ID':
           type = 'ID'
+          type = 'Integer'
           break
 
         case 32:
         case 'Image':
           type = 'Image'
+          type = 'String'
           break
 
         case 11:
@@ -170,6 +198,7 @@ export default {
         case 17:
         case 'List':
           type = 'List'
+          type = 'String'
           break
 
         case 21:
@@ -193,6 +222,7 @@ export default {
         case 22:
         case 'Number':
           type = 'Number'
+          type = 'Integer'
           break
 
         case 42:
@@ -215,6 +245,7 @@ export default {
         case 30:
         case 'Search':
           type = 'Search'
+          type = 'String'
           break
 
         case 10:
@@ -225,12 +256,14 @@ export default {
         case 18:
         case 'Table':
           type = 'Table'
+          type = 'String'
           break
 
         case 19:
         case 'Table Direct':
         case 'TableDirect':
           type = 'TableDirect'
+          type = 'String'
           break
 
         case 14:
@@ -252,6 +285,7 @@ export default {
         case 40:
         case 'URL':
           type = 'URL'
+          type = 'String'
           break
 
         case 20:
