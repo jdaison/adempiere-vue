@@ -4,7 +4,7 @@
     :minlength="data.MinLength"
     :maxlength="data.MaxLength"
     type="text"
-    pattern="[A-Za-z0-9_-]{1,15}"
+    pattern="[A-Za-z.0-9_-]{1,15}"
     placeholder="Please PrindsterName input"
     @change="handlecheck"
   />
