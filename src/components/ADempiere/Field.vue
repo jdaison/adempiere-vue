@@ -1,13 +1,18 @@
+
 <template>
   <!-- If it is marked as a single field or it is within the componentFieldOnly
     set, it will not display the label associated with the field -->
   <el-form-item
+    v-show="dataAttributes.IsDisplayed && dataAttributes.IsActive"
     v-if="dataAttributes.IsFieldOnly === true ||
     componentFieldOnly.indexOf(typeField) !== -1" >
     <component :is="afterLoader" :data="dataAttributes" />
   </el-form-item>
   <!-- On the contrary show the label associated with the column -->
-  <el-form-item v-else :label="dataAttributes.Name">
+  <el-form-item
+    v-else
+    v-show="dataAttributes.IsDisplayed && dataAttributes.IsActive"
+    :label="dataAttributes.Name">
     <component :is="afterLoader" :data="dataAttributes" />
   </el-form-item>
 </template>
@@ -38,16 +43,14 @@ export default {
     }
   },
   computed: {
-    // load the component that is indicated in the attributes of the received property
+    // load the component that is indicated in the attributes of received property
     afterLoader() {
       var typeReference = this.evalutateType(this.dataAttributes.DisplayType)
       return () => import('./' + typeReference)
     }
   },
   beforeMount() {
-    this.evaluateNULL()
-    this.evaluateFalse()
-    this.evaluateTrue()
+    this.checkValue()
     this.checkValueFormat()
   },
   methods: {
@@ -55,7 +58,8 @@ export default {
      * Parse the date format to be compatible with element-ui
      */
     checkValueFormat() {
-      if (this.dataAttributes.DisplayType === 'Date' || this.dataAttributes.DisplayType === 'DateTime') {
+      if (this.dataAttributes.DisplayType === 'Date' ||
+        this.dataAttributes.DisplayType === 'DateTime') {
         if (this.dataAttributes.VFormat.search(/[Y]/) !== -1) {
           this.dataAttributes.VFormat = this.dataAttributes.VFormat.replace(/[Y]/gi, 'y')
         }
@@ -67,37 +71,21 @@ export default {
       }
     },
     /**
-     + Evaluate the null data type to set it as undefined
+     * Evaluate the null data type to set it as undefined
+     * Evaluate the char data ('Y'. 'N') to set it as false or true
      */
-    evaluateNULL() {
+    checkValue() {
       var json = this.dataAttributes
       for (const item in json) {
+        // parse null value
         if (json[item] == null) {
           json[item] = undefined
         }
-      }
-      this.dataAttributes = json
-    },
-    /**
-     + Evaluate the false data type to set it as undefined
-     */
-    evaluateFalse() {
-      var json = this.dataAttributes
-      for (const item in json) {
-        if (json[item] === 'N') {
-          json[item] = false
-        }
-      }
-      this.dataAttributes = json
-    },
-    /**
-     + Evaluate the false data type to set it as undefined
-     */
-    evaluateTrue() {
-      var json = this.dataAttributes
-      for (const item in json) {
+        // parse boolean value
         if (json[item] === 'Y') {
           json[item] = true
+        } else if (json[item] === 'N') {
+          json[item] = false
         }
       }
       this.dataAttributes = json
@@ -111,6 +99,10 @@ export default {
       var type = ''
 
       switch (typeComponent) {
+        default:
+          type = 'String'
+          break
+
         case 25:
         case 'Account':
           type = 'Account'
@@ -210,6 +202,7 @@ export default {
 
         case 31:
         case 'Locator (WH)':
+        case 'Locator/WH':
         case 'Locator':
           type = 'Locator'
           break
