@@ -31,6 +31,12 @@ const chartsRouter = {
       meta: { title: 'List', noCache: true }
     },
     {
+      path: 'Search',
+      component: () => import('@/views/ADempiere/SearchDemo'),
+      name: 'Search',
+      meta: { title: 'Search', noCache: true }
+    },
+    {
       path: 'Color',
       component: () => import('@/views/ADempiere/ColorDemo'),
       name: 'Color',
