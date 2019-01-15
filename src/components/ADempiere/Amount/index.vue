@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <el-input-number
+  <!--<el-input-number
       v-model="val"
       :precision="data.Decimals"
       :step="data.Steps"
@@ -8,17 +7,16 @@
       :value="data.DefaultValue"
       :min="data.ValueMin"
       :max="data.ValueMax"
-      controls-position="right"/>
-    <Integer/>
-  </div>
+      controls-position="right"/>-->
+  <number-base :data="data"/>
 </template>
 
 <script>
-import Integer from '@/views/ADempiere/IntegerDemo'
+import NumberBase from '@/components/ADempiere/NumberBase'
 export default {
   name: 'Amount',
   components: {
-    Integer
+    NumberBase
   },
   props: {
     data: {
