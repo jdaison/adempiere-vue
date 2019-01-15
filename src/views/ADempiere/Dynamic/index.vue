@@ -15,7 +15,7 @@ import jsonInteger from '@/views/ADempiere/data/field/dataAttributes.Integer.jso
 import jsonString from '@/views/ADempiere/data/field/dataAttributes.String.json'
 import jsonText from '@/views/ADempiere/data/field/dataAttributes.Text.json'
 import jsonYesNo from '@/views/ADempiere/data/field/dataAttributes.YesNo.json'
-*/
+//*/
 import { getDynamic } from '@/api/ADempiere'
 import Panel from '@/components/ADempiere/Panel'
 import jsonEmployee from '@/views/ADempiere/data/field/employee.json'
@@ -27,7 +27,8 @@ export default {
   data() {
     return {
       dataAttributes: jsonEmployee.data
-      /* [
+      /*
+      dataAttributes: [
         jsonAmount,
         //jsonButton,
         jsonDate,
@@ -36,7 +37,7 @@ export default {
         jsonText,
         jsonYesNo
       ]
-      */
+      //*/
     }
   },
   created() {
