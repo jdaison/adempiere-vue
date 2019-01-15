@@ -1,11 +1,11 @@
 
 <template>
-  <el-input v-model="input" placeholder="Please input your file path or name"/>
+  <el-input v-model="value" placeholder="Please input your file path or name"/>
 </template>
 
 <script>
 export default {
-  name: 'ADFilePathOrName',
+  name: 'FilePathOrName',
   props: {
     data: {
       type: Object,
@@ -14,6 +14,7 @@ export default {
   },
   data() {
     return {
+      value: ''
     }
   },
   methods: {

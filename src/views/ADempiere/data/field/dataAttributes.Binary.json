@@ -1,9 +1,8 @@
 
 {
-
-  "ID": 2,
-  "AD_GroupField": 10,
-  "GroupField": "A",
+  "ID": 5,
+  "AD_Chart_ID": 1,
+  "AD_Process_ID": 6,
   "AD_Reference_ID": 7,
   "AD_Field_Group": null,
   "AD_Reference_Value_ID": 8,
@@ -20,7 +19,7 @@
   "Description": "Description",
   "DisplayLength": 6,
   "DisplayLogic": "Display Logic",
-  "DisplayType": "Date",
+  "DisplayType": "Binary",
   "FieldLength": 0,
   "FormatPattern": 0,
   "Help": "Help",
@@ -32,23 +31,23 @@
   "IsAlwaysUpdateable": false,
   "IsDisplayed": "Y",
   "IsEncrypted": true,
-  "IsFieldOnly": false,
+  "IsFieldOnly": true,
   "IsKey": true,
   "IsMandatory": true,
   "IsParent": true,
   "IsRange": false,
-  "IsReadOnly": true,
+  "IsReadOnly": false,
   "IsTranslated": false,
   "IsUpdateable": true,
 
-  "Name": "Date Picker",
+  "Name": "Binary",
   "PreferedWidth": 100,
 
   "SeqNo": 0,
-  "SortNo": 60,
+  "SortNo": 2,
   "UUID": "Unique Universal Id",
   "ValidationCode": 0,
-  "ValueMin": 0,
-  "ValueMax": 15,
-  "VFormat": "dd-mm-yyyy"
+  "ValueMin": 1,
+  "ValueMax": 100,
+  "Limit": 1
 }

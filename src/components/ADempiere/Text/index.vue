@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'ADText',
+  name: 'TextADempiere',
   props: {
     setData: {
       type: Object,

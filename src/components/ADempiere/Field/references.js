@@ -46,14 +46,14 @@ const REFERENCES = [
   {
     id: 27,
     type: 'Color',
-    support: false,
+    support: true,
     description: 'Color element',
     alias: ['Color']
   },
   {
     id: 37,
     type: 'CostsPrices',
-    support: false,
+    support: true,
     description: 'Costs + Prices (minimum currency precision but if exists more)',
     alias: ['CostsPrices', 'Costs+Prices', 'Cost Prices']
   },
@@ -136,7 +136,7 @@ const REFERENCES = [
   {
     id: 34,
     type: 'Memo',
-    support: false,
+    support: true,
     description: 'Reference List',
     alias: ['Memo']
   },

@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'ADTime',
+  name: 'Time',
   props: {
     data: {
       type: Object,

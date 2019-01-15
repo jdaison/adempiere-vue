@@ -2,15 +2,14 @@
 <template>
   <el-input
     v-model="input"
-    :minlength="data.MinLength"
-    :maxlength="data.MaxLength"
-    :readonly="data.IsReadOnly"
-    placeholder="Please input"/>
+    :autosize="{ minRows: 2, maxRows: 4}"
+    type="textarea"
+    placeholder="A description or long text."/>
 </template>
 
 <script>
 export default {
-  name: 'String',
+  name: 'Memo',
   props: {
     data: {
       type: Object,

@@ -1,11 +1,10 @@
-
 <template>
   <div/>
 </template>
 
 <script>
 export default {
-  name: 'ADQuantity',
+  name: 'Quantity',
   props: {
     data: {
       type: Object,

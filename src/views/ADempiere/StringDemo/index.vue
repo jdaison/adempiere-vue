@@ -1,3 +1,4 @@
+
 <template>
   <el-form class="app-container">
     <field :data-attributes="data" />
@@ -5,19 +6,17 @@
 </template>
 
 <script>
-import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Amount.json'
+import dataJSON from '@/views/ADempiere/data/field/dataAttributes.String.json'
 import Field from '@/components/ADempiere/Field'
 
 export default {
-  name: 'AmountDemo',
+  name: 'StringDemo',
   components: {
     Field
   },
   data() {
     return {
-      data: {
-        ...dataJSON
-      }
+      data: dataJSON
     }
   }
 }

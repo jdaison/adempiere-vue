@@ -80,9 +80,9 @@ export default {
           json[item] = undefined
         }
         // parse boolean value
-        if (json[item] === 'Y') {
+        if (json[item] === 'Y' || json[item] === 'y') {
           json[item] = true
-        } else if (json[item] === 'N') {
+        } else if (json[item] === 'N' || json[item] === 'n') {
           json[item] = false
         }
       }
@@ -121,7 +121,8 @@ export default {
      */
     evalutateType(id) {
       for (let i = 0; i < this.allFields.length; i++) {
-        if (id === this.allFields[i].id) {
+        // if (id === this.allFields[i].id) {
+        if (id === this.allFields[i].id || id === this.allFields[i].type) {
           if (this.allFields[i].support) {
             return this.allFields[i].type
           } else {

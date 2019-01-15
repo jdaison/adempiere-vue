@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Amount.json'
+import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Color.json'
 import Field from '@/components/ADempiere/Field'
 
 export default {
-  name: 'AmountDemo',
+  name: 'ColorDemo',
   components: {
     Field
   },

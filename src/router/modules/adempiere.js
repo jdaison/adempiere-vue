@@ -25,6 +25,24 @@ const chartsRouter = {
       meta: { title: 'Tab Component', noCache: true }
     },
     {
+      path: 'List',
+      component: () => import('@/views/ADempiere/ListDemo'),
+      name: 'List',
+      meta: { title: 'List', noCache: true }
+    },
+    {
+      path: 'Search',
+      component: () => import('@/views/ADempiere/SearchDemo'),
+      name: 'Search',
+      meta: { title: 'Search', noCache: true }
+    },
+    {
+      path: 'Color',
+      component: () => import('@/views/ADempiere/ColorDemo'),
+      name: 'Color',
+      meta: { title: 'Color', noCache: true }
+    },
+    {
       path: 'amount',
       component: () => import('@/views/ADempiere/AmountDemo'),
       name: 'Amount',
@@ -32,7 +50,7 @@ const chartsRouter = {
     },
     {
       path: 'binary',
-      component: () => import('@/components/ADempiere/Binary'),
+      component: () => import('@/views/ADempiere/BinaryDemo'),
       name: 'Binary',
       meta: { title: 'Binary', noCache: true }
     },
@@ -68,14 +86,20 @@ const chartsRouter = {
       meta: { title: 'Integer', noCache: true }
     },
     {
+      path: 'Memo',
+      component: () => import('@/views/ADempiere/MemoDemo'),
+      name: 'Memo',
+      meta: { title: 'Memo', noCache: true }
+    },
+    {
       path: 'Quantity',
-      component: () => import('@/components/ADempiere/Quantity'),
-      name: 'Quantity',
+      component: () => import('@/views/ADempiere/CostsPricesDemo'),
+      name: 'CostsPrices',
       meta: { title: 'CostsPrices', noCache: true }
     },
     {
       path: 'String',
-      component: () => import('@/components/ADempiere/String'),
+      component: () => import('@/views/ADempiere/StringDemo'),
       name: 'String',
       meta: { title: 'String', noCache: true }
     },
@@ -93,7 +117,7 @@ const chartsRouter = {
     },
     {
       path: 'YesNo',
-      component: () => import('@/components/ADempiere/YesNo'),
+      component: () => import('@/views/ADempiere/YesNoDemo'),
       name: 'YesNo',
       meta: { title: 'Yes or No', noCache: true }
     }
