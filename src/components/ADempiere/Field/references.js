@@ -102,6 +102,7 @@ const REFERENCES = [
   {
     id: 32,
     type: 'Image',
+    support: true,
     description: 'Binary Image Data',
     alias: ['Image']
   },

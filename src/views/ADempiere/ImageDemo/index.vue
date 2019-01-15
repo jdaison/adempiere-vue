@@ -1,15 +1,16 @@
 
 <template>
   <el-form class="app-container">
-    <field :data-attributes="data" />
+    <field :data-attributes="data"/>
   </el-form>
 </template>
 
 <script>
-import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Memo.json'
+import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Image.json'
 import Field from '@/components/ADempiere/Field'
+
 export default {
-  name: 'MemoDemo',
+  name: 'ImageDemo',
   components: {
     Field
   },
