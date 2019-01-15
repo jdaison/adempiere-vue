@@ -25,6 +25,18 @@ const chartsRouter = {
       meta: { title: 'Tab Component', noCache: true }
     },
     {
+      path: 'List',
+      component: () => import('@/views/ADempiere/ListDemo'),
+      name: 'List',
+      meta: { title: 'List', noCache: true }
+    },
+    {
+      path: 'Color',
+      component: () => import('@/views/ADempiere/ColorDemo'),
+      name: 'Color',
+      meta: { title: 'Color', noCache: true }
+    },
+    {
       path: 'amount',
       component: () => import('@/views/ADempiere/AmountDemo'),
       name: 'Amount',
