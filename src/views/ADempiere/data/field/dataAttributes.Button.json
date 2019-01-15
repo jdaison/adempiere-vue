@@ -1,6 +1,6 @@
 
 {
-  "type": "Button",
+  "DisplayType": "Button",
   "data": {
     "ID": 1,
     "AD_GroupField": 30,
@@ -21,7 +21,7 @@
     "Description": "Description Button",
     "DisplayLength": 6,
     "DisplayLogic": "Display Logic",
-    "DisplayType": "Display Type",
+    "DisplayType": "Button",
     "FieldLength": 0,
     "FormatPattern": 0,
     "Help": "Help Button",

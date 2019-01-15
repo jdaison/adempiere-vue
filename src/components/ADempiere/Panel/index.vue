@@ -9,7 +9,7 @@
           </template>
         </el-col>
         <el-col v-else :span="12" :key="key">
-          <el-card :header="item.groupFinal" shadow="hover">
+          <el-card :header="item.groupFinal + ' - Numbers of Fields: ' + item.numberFields" shadow="hover">
             <template v-for="(subItem, subKey) in item.dataAttributes" >
               <field :key="subItem.ID" :data-attributes="subItem" :data-key="subKey" />
             </template>
@@ -47,12 +47,6 @@ export default {
           this.sortFields(arr)
         )
       )
-      /*
-      let arrSort = this.sortFields(arr)
-      let arrAssigned = this.assignedGroup(arrSort)
-      let arrGroup = this.groupFields(arrAssigned)
-      return arrGroup
-      */
     },
     /**
      * [assignedGroup description]
@@ -107,7 +101,7 @@ export default {
      * Group the arrangement into groups of columns that they contain, it must
      * be grouped after having the order
      * @param array array
-     * @return {[array]}
+     * @return {[array]} res
      */
     groupFields(arr) {
       var res = arr.reduce(
@@ -129,6 +123,11 @@ export default {
               })
           }
         })
+      // count and add the field numbers according to your group
+      for (const i in res) {
+        res[i].numberFields = res[i].dataAttributes.length
+      }
+
       return res
     }
   }

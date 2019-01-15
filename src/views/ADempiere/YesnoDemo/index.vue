@@ -1,13 +1,13 @@
 
 <template>
-  <div class="app-container">
+  <el-form class="app-container">
     <field :data-attributes="data" />
-  </div>
+  </el-form>
 </template>
 
 <script>
 import dataJson from '@/views/ADempiere/data/field/dataAttributes.YesNo.json'
-import Field from '@/components/ADempiere/Field.vue'
+import Field from '@/components/ADempiere/Field'
 
 export default {
   name: 'YesnoDemo',

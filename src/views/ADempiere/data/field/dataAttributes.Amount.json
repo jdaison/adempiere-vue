@@ -1,6 +1,6 @@
 
 {
-  "type": "Amount",
+  "DisplayType": "Amount",
   "data": {
     "ID": 3,
     "AD_GroupField": 20,
@@ -20,7 +20,7 @@
     "Description": "Description",
     "DisplayLength": 6,
     "DisplayLogic": "Display Logic",
-    "DisplayType": "Display Type",
+    "DisplayType": "Amount",
     "FieldLength": 0,
     "FormatPattern": 0,
     "Help": "Help",

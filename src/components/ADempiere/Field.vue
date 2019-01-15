@@ -1,11 +1,11 @@
 
 <template>
-  <!-- If it is marked as a single field or it is within the componentFieldOnly
+  <!-- If it is marked as a single field or it is within the FIELD_ONLY
     set, it will not display the label associated with the field -->
   <el-form-item
     v-show="dataAttributes.IsDisplayed && dataAttributes.IsActive"
     v-if="dataAttributes.IsFieldOnly === true ||
-    componentFieldOnly.indexOf(typeField) !== -1" >
+    evaluateOnlyField(dataAttributes.DisplayType)" >
     <component :is="afterLoader" :data="dataAttributes" />
   </el-form-item>
   <!-- On the contrary show the label associated with the column -->
@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import REFERENCES, { FIELD_ONLY, FIELD_RANGE } from '@/components/ADempiere/Field/references'
+
 /**
  * This is the base component for linking the components according to the
  * reference (or type of visualization) of each field
@@ -33,20 +35,16 @@ export default {
   },
   data() {
     return {
-      typeField: this.dataAttributes.DisplayType,
-      componentTypeRange: [
-        'Amount', 'Date', 'DateTime', 'Integer', 'Quantity', 'Time', 'Yesno'
-      ],
-      componentFieldOnly: [
-        'Button'
-      ]
+      allFields: REFERENCES,
+      fieldOnly: FIELD_ONLY,
+      fieldRange: FIELD_RANGE
     }
   },
   computed: {
     // load the component that is indicated in the attributes of received property
     afterLoader() {
       var typeReference = this.evalutateType(this.dataAttributes.DisplayType)
-      return () => import('./' + typeReference)
+      return () => import('./' + typeReference + '/')
     }
   },
   beforeMount() {
@@ -91,203 +89,47 @@ export default {
       this.dataAttributes = json
     },
     /**
+     * Evaluate the current field with the range type fields contained in the
+     * constant FIELD_RANGE
+     * @param  {[integer]} id [identifier of the type of display]
+     * @return {[boolean]}
+     */
+    evaluateRange(id) {
+      var arr = this.fieldRange
+      for (let i = 0; i < arr.length; i++) {
+        if (id === arr[i].id) { return true }
+      }
+      return false
+    },
+    /**
+     * Evaluate the current field with the only fields contained in the
+     * constant FIELD_ONLY
+     * @param  {[integer]} id [identifier of the type of display]
+     * @return {[boolean]}
+     */
+    evaluateOnlyField(id) {
+      var arr = this.fieldOnly
+      for (let i = 0; i < arr.length; i++) {
+        if (id === arr[i].id) { return true }
+      }
+      return false
+    },
+    /**
      * Evaluate by the ID and name of the reference to call the component type
-     * @param mixed typeComponent, received from data
+     * @param int id, received from data
      * @return string type, assigned value to folder after evaluating the parameter
      */
-    evalutateType(typeComponent) {
-      var type = ''
-
-      switch (typeComponent) {
-        default:
-          type = 'String'
-          break
-
-        case 25:
-        case 'Account':
-          type = 'Account'
-          break
-
-        case 12:
-        case 'Amount':
-          type = 'Amount'
-          break
-
-        case 33:
-        case 'Assignment':
-          type = 'Assignment'
-          break
-
-        case 23:
-        case 'Binary':
-          type = 'Binary'
-          break
-
-        case 28:
-        case 'Button':
-          type = 'Button'
-          break
-
-        case 53370:
-        case 'Chart':
-          type = 'Chart'
-          break
-
-        case 27:
-        case 'Color':
-          type = 'Color'
-          break
-
-        case 37:
-        case 'Costs+Prices':
-        case 'CostsPrices':
-          type = 'CostsPrices'
-          break
-
-        case 15:
-        case 'Date':
-          type = 'Date'
-          break
-
-        case 16:
-        case 'Date+Time':
-        case 'DateTime':
-          type = 'DateTime'
-          break
-
-        case 39:
-        case 'FileName':
-          type = 'FileName'
-          break
-
-        case 38:
-        case 'FilePath':
-          type = 'FilePath'
-          break
-
-        case 53670:
-        case 'FilePathOrName':
-          type = 'FilePathOrName'
-          break
-
-        case 13:
-        case 'ID':
-          type = 'ID'
-          type = 'Integer'
-          break
-
-        case 32:
-        case 'Image':
-          type = 'Image'
-          type = 'String'
-          break
-
-        case 11:
-        case 'Integer':
-          type = 'Integer'
-          break
-
-        case 17:
-        case 'List':
-          type = 'List'
-          type = 'String'
-          break
-
-        case 21:
-        case 'Location (Address)':
-        case 'Location/Address':
-        case 'Location':
-          type = 'Location'
-          break
-
-        case 31:
-        case 'Locator (WH)':
-        case 'Locator/WH':
-        case 'Locator':
-          type = 'Locator'
-          break
-
-        case 34:
-        case 'Memo':
-          type = 'Memo'
-          break
-
-        case 22:
-        case 'Number':
-          type = 'Number'
-          type = 'Integer'
-          break
-
-        case 42:
-        case 'Printer Name':
-        case 'PrinterName':
-          type = 'PrinterName'
-          break
-
-        case 35:
-        case 'Product Attribute':
-        case 'ProductAttribute':
-          type = 'ProductAttribute'
-          break
-
-        case 29:
-        case 'Quantity':
-          type = 'Quantity'
-          break
-
-        case 30:
-        case 'Search':
-          type = 'Search'
-          type = 'String'
-          break
-
-        case 10:
-        case 'String':
-          type = 'String'
-          break
-
-        case 18:
-        case 'Table':
-          type = 'Table'
-          type = 'String'
-          break
-
-        case 19:
-        case 'Table Direct':
-        case 'TableDirect':
-          type = 'TableDirect'
-          type = 'String'
-          break
-
-        case 14:
-        case 'Text':
-          type = 'Text'
-          break
-
-        case 36:
-        case 'Text Long':
-        case 'TextLong':
-          type = 'TextLong'
-          break
-
-        case 24:
-        case 'Time':
-          type = 'Time'
-          break
-
-        case 40:
-        case 'URL':
-          type = 'URL'
-          type = 'String'
-          break
-
-        case 20:
-        case 'Yes-No':
-        case 'YesNo':
-          type = 'YesNo'
-          break
-      } // end switch
-      return type
+    evalutateType(id) {
+      for (let i = 0; i < this.allFields.length; i++) {
+        if (id === this.allFields[i].id) {
+          if (this.allFields[i].support) {
+            return this.allFields[i].type
+          } else {
+            return 'String'
+          }
+        }
+      }
+      return 'String'
     }
   }
 }
