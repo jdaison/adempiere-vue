@@ -1,72 +1,72 @@
+
 {
-  "type": "List",
-  "data": {
-    "ID": 3,
-    "AD_Reference_ID": 7,
-    "AD_Field_Group": null,
-    "AD_Reference_Value_ID": 8,
-    "AD_Table_ID": 9,
-    "AD_Val_Rule_ID": 10,
+  "ID": 3,
+  "AD_Reference_ID": 7,
+  "AD_Field_Group": null,
+  "AD_Reference_Value_ID": 8,
+  "AD_Table_ID": 9,
+  "AD_Val_Rule_ID": 10,
 
-    "Multiple": true,
-    "Filterable": true,
-    "CollapseTags": true,
-    "AllowCreate": true,
+  "Multiple": true,
+  "Filterable": true,
+  "CollapseTags": true,
+  "AllowCreate": true,
 
-    "Callout": "odt",
-    "ColumnName": "Column Name",
-    "ContextInfoScript": 0,
-    "ContextInfoFormatter": 0,
+  "Callout": "odt",
+  "ColumnName": "Column Name",
+  "ContextInfoScript": 0,
+  "ContextInfoFormatter": 0,
 
-    "DefaultLogic": "Default Logic",
-    "DefaultValue": 0,
-    "Description": "Description",
-    "DisplayLength": 6,
-    "DisplayLogic": "Display Logic",
-    "DisplayType": "Display Type",
-    "FieldLength": 0,
-    "FormatPattern": 0,
-    "Help": "Help",
+  "DefaultLogic": "Default Logic",
+  "DefaultValue": 0,
+  "Description": "Description",
+  "DisplayLength": 6,
+  "DisplayLogic": "Display Logic",
+  "DisplayType": "List",
+  "FieldLength": 0,
+  "FormatPattern": 0,
+  "Help": "Help",
 
-    "InfoFactoryClass": 0,
-    "IsAllowCopy": true,
-    "IsAllowLogging": true,
-    "IsAlwaysUpdateable": false,
-    "IsEncrypted": true,
-    "IsFieldOnly": true,
-    "IsKey": true,
-    "IsMandatory": true,
-    "IsParent": true,
-    "IsRange": false,
-    "IsReadOnly": false,
-    "IsTranslated": false,
-    "IsUpdateable": true,
+  "InfoFactoryClass": 0,
+  "IsActive": "Y",
+  "IsAllowCopy": true,
+  "IsAllowLogging": true,
+  "IsAlwaysUpdateable": false,
+  "IsDisplayed": "Y",
+  "IsEncrypted": true,
+  "IsFieldOnly": true,
+  "IsKey": true,
+  "IsMandatory": true,
+  "IsParent": true,
+  "IsRange": false,
+  "IsReadOnly": false,
+  "IsTranslated": false,
+  "IsUpdateable": true,
 
-    "Name": "List",
-    "PreferedWidth": 100,
+  "Name": "List",
+  "PreferedWidth": 100,
 
-    "Options":[
-        {
-            "label": "Option1",
-            "value": 1
-        },
-        {
-            "label": "Option2",
-            "value": 2
-        },
-        {
-            "label": "Option3",
-            "value": 3
-        },
-        {
-            "label": "Option4",
-            "value": 4
-        }
-    ],
+  "Options":[
+      {
+          "label": "Option1",
+          "value": 1
+      },
+      {
+          "label": "Option2",
+          "value": 2
+      },
+      {
+          "label": "Option3",
+          "value": 3
+      },
+      {
+          "label": "Option4",
+          "value": 4
+      }
+  ],
 
-    "SeqNo": 0,
-    "SortNo": 4,
-    "UUID": "Unique Universal Id",
-    "ValidationCode": 0
-  }
+  "SeqNo": 0,
+  "SortNo": 4,
+  "UUID": "Unique Universal Id",
+  "ValidationCode": 0
 }
