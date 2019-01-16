@@ -1,18 +1,15 @@
 
 <template>
-  <el-input-number
-    v-model="val"
-    :step="data.Steps"
-    :disabled="data.IsReadOnly"
-    :precision="data.Decimals"
-    :value="data.DefaultValue"
-    :min="data.ValueMin"
-    :max="data.ValueMax"/>
+  <number-base :data="data"/>
 </template>
 
 <script>
+import NumberBase from '@/components/ADempiere/NumberBase'
 export default {
   name: 'Integer',
+  components: {
+    NumberBase
+  },
   props: {
     data: {
       type: Object,

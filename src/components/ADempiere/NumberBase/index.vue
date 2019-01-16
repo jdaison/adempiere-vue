@@ -8,6 +8,7 @@
     :value="data.DefaultValue"
     :min="data.ValueMin"
     :max="data.ValueMax"
+    :controls="data.Controls"
     controls-position="right"/>
 </template>
 

@@ -1,22 +1,13 @@
 <template>
-  <el-select
-    v-model="val"
-    :multiple="data.Multiple"
-    :collapse-tags="data.CollapseTags"
-    :filterable="data.Filterable"
-    :allow-create="data.AllowCreate"
-    :placeholder="data.Help"
-    :disabled="data.IsReadOnly">
-    <el-option
-      v-for="item in data.Options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value"/>
-  </el-select>
+  <select-base :data="data"/>
 </template>
 <script>
+import SelectBase from '@/components/ADempiere/SelectBase'
 export default {
   name: 'List',
+  components: {
+    SelectBase
+  },
   props: {
     data: {
       type: Object,

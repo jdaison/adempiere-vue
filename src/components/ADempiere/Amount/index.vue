@@ -1,13 +1,4 @@
 <template>
-  <!--<el-input-number
-      v-model="val"
-      :precision="data.Decimals"
-      :step="data.Steps"
-      :disabled="data.IsReadOnly"
-      :value="data.DefaultValue"
-      :min="data.ValueMin"
-      :max="data.ValueMax"
-      controls-position="right"/>-->
   <number-base :data="data"/>
 </template>
 
