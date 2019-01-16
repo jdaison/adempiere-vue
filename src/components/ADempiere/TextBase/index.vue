@@ -1,13 +1,16 @@
+
 <template>
-  <text-base :data="data"/>
+  <el-input
+    v-model="input"
+    :minlength="data.MinLength"
+    :maxlength="data.MaxLength"
+    :readonly="data.IsReadOnly"
+    placeholder="Please input"/>
 </template>
+
 <script>
-import TextBase from '@/components/ADempiere/TextBase'
 export default {
-  name: 'String',
-  components: {
-    TextBase
-  },
+  name: 'TextBase',
   props: {
     data: {
       type: Object,
