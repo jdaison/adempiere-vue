@@ -116,21 +116,20 @@ export default {
     },
     /**
      * Evaluate by the ID and name of the reference to call the component type
-     * @param int id, received from data
+     * @param mixed param, received from data
      * @return string type, assigned value to folder after evaluating the parameter
      */
-    evalutateType(id) {
+    evalutateType(param) {
       for (let i = 0; i < this.allFields.length; i++) {
-        // if (id === this.allFields[i].id) {
-        if (id === this.allFields[i].id || id === this.allFields[i].type) {
+        if (param === this.allFields[i].id || param === this.allFields[i].type) {
           if (this.allFields[i].support) {
             return this.allFields[i].type
           } else {
-            return 'Memo'
+            return 'String'
           }
         }
       }
-      return 'Memo'
+      return 'String'
     }
   }
 }
