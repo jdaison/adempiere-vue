@@ -117,7 +117,7 @@ const chartsRouter = {
     },
     {
       path: 'Time',
-      component: () => import('@/components/ADempiere/Time'),
+      component: () => import('@/views/ADempiere/TimeDemo'),
       name: 'Time',
       meta: { title: 'Time', noCache: true }
     },
