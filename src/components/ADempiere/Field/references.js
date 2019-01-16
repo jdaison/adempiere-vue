@@ -74,7 +74,7 @@ const REFERENCES = [
   {
     id: 39,
     type: 'FileName',
-    support: false,
+    support: true,
     description: 'Local File',
     alias: ['FileName', 'File Name']
   },
