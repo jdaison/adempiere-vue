@@ -135,6 +135,12 @@ const chartsRouter = {
       meta: { title: 'Time', noCache: true }
     },
     {
+      path: 'Url',
+      component: () => import('@/views/ADempiere/UrlDemo'),
+      name: 'Url',
+      meta: { title: 'Url', noCache: true }
+    },
+    {
       path: 'YesNo',
       component: () => import('@/views/ADempiere/YesNoDemo'),
       name: 'YesNo',

@@ -227,8 +227,8 @@ const REFERENCES = [
   },
   {
     id: 40,
-    type: 'URL',
-    support: false,
+    type: 'Url',
+    support: true,
     description: 'URL',
     alias: ['URL', 'Url']
   },
