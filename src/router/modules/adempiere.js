@@ -73,6 +73,12 @@ const chartsRouter = {
       meta: { title: 'Date Time', noCache: true }
     },
     {
+      path: 'FileName',
+      component: () => import('@/views/ADempiere/FileNameDemo'),
+      name: 'FileName',
+      meta: { title: 'FileName', noCache: true }
+    },
+    {
       path: 'filePathOrName',
       component: () => import('@/components/ADempiere/FilePathOrName'),
       name: 'FilePathOrName',
@@ -86,10 +92,22 @@ const chartsRouter = {
       meta: { title: 'Integer', noCache: true }
     },
     {
+      path: 'Image',
+      component: () => import('@/views/ADempiere/ImageDemo'),
+      name: 'Image',
+      meta: { title: 'Image', noCache: true }
+    },
+    {
       path: 'Memo',
       component: () => import('@/views/ADempiere/MemoDemo'),
       name: 'Memo',
       meta: { title: 'Memo', noCache: true }
+    },
+    {
+      path: 'PrinterName',
+      component: () => import('@/views/ADempiere/PrinterNameDemo'),
+      name: 'PrinterName',
+      meta: { title: 'PrinterName', noCache: true }
     },
     {
       path: 'Quantity',
@@ -111,7 +129,7 @@ const chartsRouter = {
     },
     {
       path: 'Time',
-      component: () => import('@/components/ADempiere/Time'),
+      component: () => import('@/views/ADempiere/TimeDemo'),
       name: 'Time',
       meta: { title: 'Time', noCache: true }
     },

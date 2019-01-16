@@ -6,17 +6,19 @@
 </template>
 
 <script>
-import dataJSON from '@/views/ADempiere/data/field/dataAttributes.String.json'
+import dataJSON from '@/views/ADempiere/data/field/dataAttributes.Time.json'
 import Field from '@/components/ADempiere/Field'
 
 export default {
-  name: 'StringDemo',
+  name: 'TimeDemo',
   components: {
     Field
   },
   data() {
     return {
-      data: dataJSON
+      data: {
+        ...dataJSON
+      }
     }
   }
 }

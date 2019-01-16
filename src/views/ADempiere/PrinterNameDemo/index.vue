@@ -6,17 +6,19 @@
 </template>
 
 <script>
-import dataJSON from '@/views/ADempiere/data/field/dataAttributes.String.json'
-import Field from '@/components/ADempiere/Field'
+import dataJson from '@/views/ADempiere/data/field/dataAttributes.FileName.json'
+import Field from '@/components/ADempiere/Field.vue'
 
 export default {
-  name: 'StringDemo',
+  name: 'FilePathOrNameDemo',
   components: {
     Field
   },
   data() {
     return {
-      data: dataJSON
+      data: {
+        ...dataJson
+      }
     }
   }
 }

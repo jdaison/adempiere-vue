@@ -1,10 +1,7 @@
 
 {
-  "ID": 5,
-  "AD_GroupField": 0,
-  "GroupField": "0",
+  "ID": 4,
   "AD_Reference_ID": 7,
-  "AD_Field_Group": null,
   "AD_Reference_Value_ID": 8,
   "AD_Table_ID": 9,
   "AD_Val_Rule_ID": 10,
@@ -19,7 +16,7 @@
   "Description": "Description",
   "DisplayLength": 6,
   "DisplayLogic": "Display Logic",
-  "DisplayType": "String",
+  "DisplayType": "PrinterName",
   "FieldLength": 0,
   "FormatPattern": 0,
   "Help": "Help",
@@ -40,14 +37,12 @@
   "IsTranslated": "N",
   "IsUpdateable": "Y",
 
-  "Name": "String",
+  "Name": "Printer Name",
   "PreferedWidth": 100,
 
   "SeqNo": 0,
   "SortNo": 0,
   "UUID": "Unique Universal Id",
   "ValidationCode": 0,
-  "MinLength": 2,
-  "MaxLength": 5,
   "VFormat": "dd-mm-yyy"
 }

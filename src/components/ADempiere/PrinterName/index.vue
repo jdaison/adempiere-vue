@@ -1,20 +1,22 @@
 
 <template>
-  <el-input v-model="value" placeholder="Please input your file path or name"/>
+  <el-input
+    v-model="input"
+    placeholder="Please Printer Name input"/>
 </template>
 
 <script>
 export default {
-  name: 'FilePathOrName',
+  name: 'PrinterName',
   props: {
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {
     return {
-      value: ''
+      input: ''
     }
   }
 }

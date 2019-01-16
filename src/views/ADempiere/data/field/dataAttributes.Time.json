@@ -1,10 +1,6 @@
-
 {
-  "ID": 5,
-  "AD_GroupField": 0,
-  "GroupField": "0",
+  "ID": 2,
   "AD_Reference_ID": 7,
-  "AD_Field_Group": null,
   "AD_Reference_Value_ID": 8,
   "AD_Table_ID": 9,
   "AD_Val_Rule_ID": 10,
@@ -15,11 +11,11 @@
   "ContextInfoFormatter": 0,
 
   "DefaultLogic": "Default Logic",
-  "DefaultValue": "Default Value",
+  "DefaultValue": 0,
   "Description": "Description",
   "DisplayLength": 6,
   "DisplayLogic": "Display Logic",
-  "DisplayType": "String",
+  "DisplayType": "Time",
   "FieldLength": 0,
   "FormatPattern": 0,
   "Help": "Help",
@@ -29,25 +25,26 @@
   "IsAllowCopy": "Y",
   "IsAllowLogging": "Y",
   "IsAlwaysUpdateable": "N",
-  "IsDisplayed": "Y",
   "IsEncrypted": "Y",
+  "IsDisplayed": "Y",
   "IsFieldOnly": "N",
   "IsKey": "Y",
   "IsMandatory": "Y",
   "IsParent": "Y",
   "IsRange": "N",
-  "IsReadOnly": "Y",
+  "IsReadOnly": "N",
   "IsTranslated": "N",
   "IsUpdateable": "Y",
 
-  "Name": "String",
+  "Name": "Timepicker",
   "PreferedWidth": 100,
 
   "SeqNo": 0,
   "SortNo": 0,
   "UUID": "Unique Universal Id",
   "ValidationCode": 0,
-  "MinLength": 2,
-  "MaxLength": 5,
-  "VFormat": "dd-mm-yyy"
+  "ValueMin": "00:00:00",
+  "ValueMax": "23:59:59",
+  "Range": ["08:00:00 - 12:30:00", "13:30:00 - 18:00:00"],
+  "VFormat": "HH:mm:ss"
 }
