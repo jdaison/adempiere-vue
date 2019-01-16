@@ -22,3 +22,8 @@ export default {
   }
 }
 </script>
+<style>
+  .el-input-number.is-controls-right .el-input__inner{
+    padding-right: 15px;
+  }
+</style>

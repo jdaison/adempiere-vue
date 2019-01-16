@@ -28,3 +28,8 @@ export default {
   }
 }
 </script>
+<style>
+  .el-input-number .el-input__inner{
+    text-align: right;
+  }
+</style>
