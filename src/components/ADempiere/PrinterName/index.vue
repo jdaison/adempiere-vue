@@ -1,13 +1,14 @@
 
 <template>
-  <el-input
-    v-model="input"
-    placeholder="Please Printer Name input"/>
+  <text-base :data="data"/>
 </template>
-
 <script>
+import TextBase from '@/components/ADempiere/TextBase'
 export default {
   name: 'PrinterName',
+  components: {
+    TextBase
+  },
   props: {
     data: {
       type: Object,

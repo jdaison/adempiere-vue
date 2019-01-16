@@ -1,3 +1,4 @@
+
 <template>
   <text-base :data="data"/>
 </template>

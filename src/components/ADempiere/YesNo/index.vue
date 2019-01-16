@@ -20,7 +20,9 @@ export default {
   },
   data() {
     return {
-      value: 'Y'
+      value: 'Y',
+      MinCol: 3,
+      MaxCol: 6
     }
   },
   methods: {

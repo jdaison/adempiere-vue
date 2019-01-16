@@ -5,6 +5,7 @@
     :minlength="data.MinLength"
     :maxlength="data.MaxLength"
     :readonly="data.IsReadOnly"
+    :pattern="pattern"
     placeholder="Please input"/>
 </template>
 
@@ -15,6 +16,10 @@ export default {
     data: {
       type: Object,
       required: true
+    },
+    pattern: {
+      type: String,
+      default: ''
     }
   },
   data() {

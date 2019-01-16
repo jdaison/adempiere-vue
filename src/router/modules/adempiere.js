@@ -116,6 +116,12 @@ const chartsRouter = {
       meta: { title: 'CostsPrices', noCache: true }
     },
     {
+      path: 'PrinterName',
+      component: () => import('@/views/ADempiere/PrinterNameDemo'),
+      name: 'PrinterName',
+      meta: { title: 'PrinterName', noCache: true }
+    },
+    {
       path: 'Quantity',
       // component: () => import('@/components/ADempiere/Integer'),
       component: () => import('@/views/ADempiere/QuantityDemo'),

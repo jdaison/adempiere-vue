@@ -34,7 +34,7 @@
   "IsMandatory": "Y",
   "IsParent": "Y",
   "IsRange": "N",
-  "IsReadOnly": "Y",
+  "IsReadOnly": "N",
   "IsTranslated": "N",
   "IsUpdateable": "Y",
 

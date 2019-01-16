@@ -1,21 +1,14 @@
 
 <template>
-  <el-input
-    v-model="input"
-    :disabled="data.Disabled"
-    :format="data.FormatPattern"
-    :minlength="data.MinLength"
-    :maxlength="data.MaxLength"
-    :readonly="data.IsReadOnly"
-    placeholder="Please input URL"
-    patron = "^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/"
-    @blur="handlecheck"
-  />
+  <text-base :data="data"/>
 </template>
-
 <script>
+import TextBase from '@/components/ADempiere/TextBase'
 export default {
   name: 'Url',
+  components: {
+    TextBase
+  },
   props: {
     data: {
       type: Object,
@@ -40,7 +33,7 @@ export default {
       } else {
         // alert("This URL worn format")
         // e.target.focus()
-        console.log('url worn')
+        console.log('url wrong')
       }
     }
 
