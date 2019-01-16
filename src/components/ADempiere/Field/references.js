@@ -88,7 +88,7 @@ const REFERENCES = [
   {
     id: 38,
     type: 'FilePathOrName',
-    support: true,
+    support: false,
     description: 'Local File Path or Name',
     alias: ['FilePathOrName', 'File Path Or Name']
   },
@@ -151,7 +151,7 @@ const REFERENCES = [
   {
     id: 42,
     type: 'PrinterName',
-    support: false,
+    support: true,
     description: 'Printer Name',
     alias: ['PrinterName', 'Printer Name']
   },

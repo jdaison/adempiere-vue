@@ -29,7 +29,7 @@
   "IsAlwaysUpdateable": "N",
   "IsDisplayed": "Y",
   "IsEncrypted": "Y",
-  "IsFieldOnly": "Y",
+  "IsFieldOnly": "N",
   "IsKey": "Y",
   "IsMandatory": "Y",
   "IsParent": "Y",
@@ -39,7 +39,7 @@
   "IsUpdateable": "Y",
   "Controls": "N",
 
-  "Name": "CostsPrices",
+  "Name": "Costs + Prices",
   "PreferedWidth": 100,
 
   "SeqNo": 0,

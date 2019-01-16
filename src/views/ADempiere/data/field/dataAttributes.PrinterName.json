@@ -1,28 +1,25 @@
 
 {
-  "ID": 1,
-  "AD_GroupField": 30,
-  "GroupField": 0,
-  "AD_Process_ID": 6,
+  "ID": 4,
   "AD_Reference_ID": 7,
   "AD_Reference_Value_ID": 8,
   "AD_Table_ID": 9,
   "AD_Val_Rule_ID": 10,
 
   "Callout": "odt",
-  "ColumnName": "Column Name from Button",
+  "ColumnName": "Column Name",
   "ContextInfoScript": 0,
   "ContextInfoFormatter": 0,
 
   "DefaultLogic": "Default Logic",
   "DefaultValue": "Default Value",
-  "Description": "Description Button",
+  "Description": "Description",
   "DisplayLength": 6,
   "DisplayLogic": "Display Logic",
-  "DisplayType": "Button",
+  "DisplayType": "PrinterName",
   "FieldLength": 0,
   "FormatPattern": 0,
-  "Help": "Help Button",
+  "Help": "Help",
 
   "InfoFactoryClass": 0,
   "IsActive": "Y",
@@ -40,11 +37,12 @@
   "IsTranslated": "N",
   "IsUpdateable": "Y",
 
-  "Name": "Name of the Button ",
+  "Name": "Printer Name",
   "PreferedWidth": 100,
 
   "SeqNo": 0,
-  "SortNo": 100,
+  "SortNo": 0,
   "UUID": "Unique Universal Id",
-  "ValidationCode": 0
+  "ValidationCode": 0,
+  "VFormat": "dd-mm-yyy"
 }

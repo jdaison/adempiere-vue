@@ -126,11 +126,11 @@ export default {
           if (this.allFields[i].support) {
             return this.allFields[i].type
           } else {
-            return 'String'
+            return 'Memo'
           }
         }
       }
-      return 'String'
+      return 'Memo'
     }
   }
 }
@@ -149,5 +149,15 @@ export default {
    */
   .el-form-item {
     margin-bottom: 10px !important;
+  }
+</style>
+<style>
+  /* Global Styles */
+  .el-textarea__inner {
+    min-height: 36px !important;
+    /*
+    height: 36px auto !important;
+    max-height: 54.2333px !important;
+    */
   }
 </style>
