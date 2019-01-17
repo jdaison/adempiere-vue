@@ -88,7 +88,7 @@ const REFERENCES = [
   {
     id: 38,
     type: 'FilePathOrName',
-    support: false,
+    support: true,
     description: 'Local File Path or Name',
     alias: ['FilePathOrName', 'File Path Or Name']
   },
@@ -116,7 +116,7 @@ const REFERENCES = [
   {
     id: 17,
     type: 'List',
-    support: false,
+    support: true,
     description: 'Reference List',
     alias: ['List']
   },
@@ -179,7 +179,7 @@ const REFERENCES = [
   {
     id: 30,
     type: 'Search',
-    support: false,
+    support: true,
     description: 'Search Field',
     alias: ['Search']
   },
