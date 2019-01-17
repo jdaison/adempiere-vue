@@ -1,18 +1,16 @@
+
 <template>
-  <el-input
-    v-model="input"
-    :minlength="data.MinLength"
-    :maxlength="data.MaxLength"
-    type="text"
-    pattern="[A-Za-z/.0-9_-]{1,200}"
-    placeholder="Please PrindsterPath input"
-    @change="handlecheck"
-  />
+  <text-base :data="data" :pattern="pattern" />
+
 </template>
 
 <script>
+import TextBase from '@/components/ADempiere/TextBase'
 export default {
   name: 'FilePath',
+  components: {
+    TextBase
+  },
   props: {
     data: {
       type: Object,
@@ -21,17 +19,9 @@ export default {
   },
   data() {
     return {
-      input: ''
+      input: '',
+      pattern: '[A-Za-zñÑ0-9-_/.]{1,}'
     }
-  },
-
-  methods: {
-    handlecheck(e) {
-      // Patron de entrada, en este caso solo acepta numeros y letras
-      const pattern = /[A-Za-z/0-9]/
-      return pattern.test()
-    }
-
   }
 }
 </script>
