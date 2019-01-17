@@ -81,7 +81,7 @@ const REFERENCES = [
   {
     id: 38,
     type: 'FilePath',
-    support: false,
+    support: true,
     description: 'Local File Path',
     alias: ['FilePath', 'File Path']
   },
