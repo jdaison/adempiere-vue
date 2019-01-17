@@ -121,6 +121,12 @@ const chartsRouter = {
       meta: { title: 'Memo', noCache: true }
     },
     {
+      path: 'Number',
+      component: () => import('@/views/ADempiere/NumberDemo'),
+      name: 'Number',
+      meta: { title: 'Number', noCache: true }
+    },
+    {
       path: 'CostsPrices',
       component: () => import('@/views/ADempiere/CostsPricesDemo'),
       name: 'CostsPrices',

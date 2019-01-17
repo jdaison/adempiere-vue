@@ -144,7 +144,7 @@ const REFERENCES = [
   {
     id: 22,
     type: 'Number',
-    support: false,
+    support: true,
     description: 'Float Number',
     alias: ['Number']
   },
