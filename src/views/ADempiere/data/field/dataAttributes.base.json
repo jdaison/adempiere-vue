@@ -1,7 +1,6 @@
 
 {
     "AD_Reference_ID": 7,
-    "AD_Field_Group": null,
     "ID": 2,
     "Callout": "odt",
     "ColumnName": "Column Name",
@@ -14,6 +13,7 @@
     "DisplayLength": 6,
     "DisplayLogic": "Display Logic",
     "DisplayType": "ADReference",
+    "FieldGroup": 0,
     "FieldLength": 0,
     "Help": "Help",
 

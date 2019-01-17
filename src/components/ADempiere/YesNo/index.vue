@@ -21,8 +21,10 @@ export default {
   data() {
     return {
       value: 'Y',
-      MinCol: 3,
-      MaxCol: 6
+      minWidthField: 3,
+      maxWidthField: 3,
+      minHeightField: null,
+      maxHeightField: null
     }
   },
   methods: {

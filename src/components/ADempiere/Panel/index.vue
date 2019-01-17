@@ -37,6 +37,9 @@ export default {
   data() {
     return {
       labelPosition: 'top',
+      minSizeColumns: 3,
+      preSizeColumns: 12,
+      maxSizeColumns: 24,
       estatusGroup: true
     }
   },
@@ -50,22 +53,22 @@ export default {
     },
     /**
      * [assignedGroup description]
-     * @param  {[type]} arr [description]
-     * @return {[type]} arrGroup [description]
+     * @param  {array} arr [description]
+     * @return {array} arrGroup [description]
      */
     assignedGroup(arr) {
       let firstChangeGroup = false
-      let currentGroup = String(arr[0].AD_FieldGroup_ID)
+      let currentGroup = String(arr[0].FieldGroup)
 
       if (currentGroup === '' || currentGroup === null) {
         currentGroup = String(0)
       }
-      arr[0].AD_FieldGroup_ID = String(currentGroup)
+      arr[0].FieldGroup = String(currentGroup)
 
       for (let i = 0; i < arr.length; i++) {
         // change the first field group, change the band
         if (firstChangeGroup === false) {
-          if (String(currentGroup) !== String(arr[i].AD_FieldGroup_ID)) {
+          if (String(currentGroup) !== String(arr[i].FieldGroup)) {
             firstChangeGroup = true
           }
         }
@@ -74,11 +77,11 @@ export default {
         // assigns the following field items to the current field group whose
         // field group is 0
         if (firstChangeGroup) {
-          if (arr[i].AD_FieldGroup_ID === '0' || arr[i].AD_FieldGroup_ID === 0) {
-            arr[i].AD_FieldGroup_ID = currentGroup
+          if (arr[i].FieldGroup === '0' || arr[i].FieldGroup === 0) {
+            arr[i].FieldGroup = currentGroup
           } else {
-            currentGroup = arr[i].AD_FieldGroup_ID
-            arr[i].AD_FieldGroup_ID = currentGroup
+            currentGroup = arr[i].FieldGroup
+            arr[i].FieldGroup = currentGroup
           }
         }
         arr[i].GroupAssigned = currentGroup
@@ -89,7 +92,7 @@ export default {
      * Sorts the column components according to the value that is obtained from
      * the array that contains the JSON objects in the data.SortNo property
      * @param array arr
-     * @return {[array]} order by arr.data.SortNo
+     * @return {array} order by arr.data.SortNo
      */
     sortFields(arr) {
       // Set slice() to avoid to generate an infinite loop!
@@ -101,7 +104,7 @@ export default {
      * Group the arrangement into groups of columns that they contain, it must
      * be grouped after having the order
      * @param array array
-     * @return {[array]} res
+     * @return {array} res
      */
     groupFields(arr) {
       var res = arr.reduce(
@@ -169,5 +172,10 @@ export default {
     .el-button {
       width: 110px;
     }
+  }
+</style>
+<style>
+  .el-card__body {
+    background-color: #f8f8f8;
   }
 </style>

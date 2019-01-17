@@ -23,12 +23,20 @@ export default {
   },
   data() {
     return {
-      val: 0
+      val: 0,
+      minWidthField: 6,
+      maxWidthField: 12,
+      minHeightField: null,
+      maxHeightField: null
     }
   }
 }
 </script>
-<style>
+
+<style scoped>
+  .el-input-number--medium, .el-input-number {
+    width: 100% !important;
+  }
   .el-input-number .el-input__inner{
     text-align: right;
   }

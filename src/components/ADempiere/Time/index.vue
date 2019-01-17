@@ -15,7 +15,11 @@ export default {
   props: {
     data: {
       type: Object,
-      required: true
+      required: true,
+      minWidthField: 6,
+      maxWidthField: 12,
+      minHeightField: null,
+      maxHeightField: null
     }
   },
   data() {
@@ -25,3 +29,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .el-date-editor.el-input, .el-date-editor.el-input__inner {
+    width: 100% !important;
+  }
+</style>

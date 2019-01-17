@@ -1,7 +1,6 @@
 {
   "ID": 30,
   "AD_Reference_ID": 7,
-  "AD_Field_Group": 0,
   "AD_Reference_Value_ID": 8,
   "AD_Table_ID": 9,
   "AD_Val_Rule_ID": 10,
@@ -24,6 +23,7 @@
   "DisplayLength": 6,
   "DisplayLogic": "Display Logic",
   "DisplayType": "Search",
+  "FieldGroup": 0,
   "FieldLength": 0,
   "FormatPattern": 0,
   "Help": "Help",

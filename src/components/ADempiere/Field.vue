@@ -80,9 +80,9 @@ export default {
           json[item] = undefined
         }
         // parse boolean value
-        if (json[item] === 'Y' || json[item] === 'y') {
+        if (String(json[item]).toUpperCase() === 'Y') {
           json[item] = true
-        } else if (json[item] === 'N' || json[item] === 'n') {
+        } else if (String(json[item]).toUpperCase() === 'N') {
           json[item] = false
         }
       }
@@ -91,8 +91,8 @@ export default {
     /**
      * Evaluate the current field with the range type fields contained in the
      * constant FIELD_RANGE
-     * @param  {[integer]} id [identifier of the type of display]
-     * @return {[boolean]}
+     * @param  {integer} id [identifier of the type of display]
+     * @return {boolean}
      */
     evaluateRange(id) {
       var arr = this.fieldRange
@@ -104,8 +104,8 @@ export default {
     /**
      * Evaluate the current field with the only fields contained in the
      * constant FIELD_ONLY
-     * @param  {[integer]} id [identifier of the type of display]
-     * @return {[boolean]}
+     * @param  {integer} id [identifier of the type of display]
+     * @return {boolean}
      */
     evaluateOnlyField(id) {
       var arr = this.fieldOnly
@@ -116,7 +116,7 @@ export default {
     },
     /**
      * Evaluate by the ID and name of the reference to call the component type
-     * @param mixed param, received from data
+     * @param {mixed} param, received from data
      * @return string type, assigned value to folder after evaluating the parameter
      */
     evalutateType(param) {

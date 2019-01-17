@@ -1,7 +1,7 @@
+
 {
   "ID": 3,
   "AD_Reference_ID": 7,
-  "AD_Field_Group": null,
   "AD_Reference_Value_ID": 8,
   "AD_Table_ID": 9,
   "AD_Val_Rule_ID": 10,
@@ -17,6 +17,7 @@
   "DisplayLength": 6,
   "DisplayLogic": "Display Logic",
   "DisplayType": "Quantity",
+  "FieldGroup": 0,
   "FieldLength": 0,
   "FormatPattern": 0,
   "Help": "Help",
@@ -36,7 +37,6 @@
   "IsReadOnly": "N",
   "IsTranslated": "N",
   "IsUpdateable": "Y",
-  "Controls": "N",
 
   "Name": "Quantity",
   "PreferedWidth": 100,
@@ -48,5 +48,5 @@
   "ValueMin": null,
   "ValueMax": null,
   "Decimals": 0,
-  "Controls": true
+  "Controls": "Y"
 }

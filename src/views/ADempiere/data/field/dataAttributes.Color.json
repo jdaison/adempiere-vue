@@ -2,7 +2,6 @@
 {
   "ID": 3,
   "AD_Reference_ID": 7,
-  "AD_Field_Group": null,
   "AD_Reference_Value_ID": 8,
   "AD_Table_ID": 9,
   "AD_Val_Rule_ID": 10,
@@ -18,6 +17,7 @@
   "DisplayLength": 6,
   "DisplayLogic": "Display Logic",
   "DisplayType": "Color",
+  "FieldGroup": 0,
   "FieldLength": 0,
   "FormatPattern": 0,
   "Help": "Help",

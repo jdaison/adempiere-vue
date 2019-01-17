@@ -1,3 +1,4 @@
+
 <template>
   <el-select
     v-model="val"
@@ -14,6 +15,7 @@
       :value="item.value"/>
   </el-select>
 </template>
+
 <script>
 export default {
   name: 'SelectBase',
@@ -28,7 +30,11 @@ export default {
       val: [],
       loading: false,
       options: [],
-      list: []
+      list: [],
+      minWidthField: 6,
+      maxWidthField: 24,
+      minHeightField: null,
+      maxHeightField: null
     }
   }
 }

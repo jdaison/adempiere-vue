@@ -25,24 +25,6 @@ const chartsRouter = {
       meta: { title: 'Tab Component', noCache: true }
     },
     {
-      path: 'List',
-      component: () => import('@/views/ADempiere/ListDemo'),
-      name: 'List',
-      meta: { title: 'List', noCache: true }
-    },
-    {
-      path: 'Search',
-      component: () => import('@/views/ADempiere/SearchDemo'),
-      name: 'Search',
-      meta: { title: 'Search', noCache: true }
-    },
-    {
-      path: 'Color',
-      component: () => import('@/views/ADempiere/ColorDemo'),
-      name: 'Color',
-      meta: { title: 'Color', noCache: true }
-    },
-    {
       path: 'amount',
       component: () => import('@/views/ADempiere/AmountDemo'),
       name: 'Amount',
@@ -59,6 +41,18 @@ const chartsRouter = {
       component: () => import('@/components/ADempiere/Button'),
       name: 'Button',
       meta: { title: 'Button', noCache: true }
+    },
+    {
+      path: 'Color',
+      component: () => import('@/views/ADempiere/ColorDemo'),
+      name: 'Color',
+      meta: { title: 'Color', noCache: true }
+    },
+    {
+      path: 'CostsPrices',
+      component: () => import('@/views/ADempiere/CostsPricesDemo'),
+      name: 'CostsPrices',
+      meta: { title: 'CostsPrices', noCache: true }
     },
     {
       path: 'date',
@@ -91,29 +85,28 @@ const chartsRouter = {
       meta: { title: 'File Path Or Name', noCache: true }
     },
     {
-      path: 'Integer',
-      // component: () => import('@/components/ADempiere/Integer'),
-      component: () => import('@/views/ADempiere/IntegerDemo'),
-      name: 'Integer',
-      meta: { title: 'Integer', noCache: true }
-    },
-    {
       path: 'Image',
       component: () => import('@/views/ADempiere/ImageDemo'),
       name: 'Image',
       meta: { title: 'Image', noCache: true }
     },
     {
+      path: 'Integer',
+      component: () => import('@/views/ADempiere/IntegerDemo'),
+      name: 'Integer',
+      meta: { title: 'Integer', noCache: true }
+    },
+    {
+      path: 'List',
+      component: () => import('@/views/ADempiere/ListDemo'),
+      name: 'List',
+      meta: { title: 'List', noCache: true }
+    },
+    {
       path: 'Memo',
       component: () => import('@/views/ADempiere/MemoDemo'),
       name: 'Memo',
       meta: { title: 'Memo', noCache: true }
-    },
-    {
-      path: 'CostsPrices',
-      component: () => import('@/views/ADempiere/CostsPricesDemo'),
-      name: 'CostsPrices',
-      meta: { title: 'CostsPrices', noCache: true }
     },
     {
       path: 'PrinterName',
@@ -127,6 +120,12 @@ const chartsRouter = {
       component: () => import('@/views/ADempiere/QuantityDemo'),
       name: 'Quantity',
       meta: { title: 'Quantity', noCache: true }
+    },
+    {
+      path: 'Search',
+      component: () => import('@/views/ADempiere/SearchDemo'),
+      name: 'Search',
+      meta: { title: 'Search', noCache: true }
     },
     {
       path: 'String',

@@ -15,9 +15,10 @@
     "DefaultValue": "Default Value",
     "Description": "Description",
     "DisplayLength": 6,
-    "DisplayLogic": "Display Logic",    
+    "DisplayLogic": "Display Logic",
     "DisplayType": "Url",
     "Disabled": false,
+    "FieldGroup": 0,
     "FieldLength": 0,
     "FormatPattern": 0,
     "Help": "Help",
@@ -49,4 +50,3 @@
     "ValidationCode": 0,
     "VFormat": "dd-mm-yyy"
 }
-  
