@@ -214,7 +214,7 @@ const REFERENCES = [
   {
     id: 36,
     type: 'TextLong',
-    support: false,
+    support: true,
     description: 'Text (Long) - Text > 2000 characters',
     alias: ['TextLong', 'Text Long']
   },
