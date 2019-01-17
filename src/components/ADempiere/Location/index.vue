@@ -1,14 +1,12 @@
-
 <template>
-  <textarea-base :data="data"/>
+  <select-base :data="data"/>
 </template>
-
 <script>
-import TextareaBase from '@/components/ADempiere/TextareaBase'
+import SelectBase from '@/components/ADempiere/SelectBase'
 export default {
-  name: 'TextLong',
+  name: 'Location',
   components: {
-    TextareaBase
+    SelectBase
   },
   props: {
     data: {
@@ -18,7 +16,7 @@ export default {
   },
   data() {
     return {
-      input: ''
+      val: []
     }
   }
 }

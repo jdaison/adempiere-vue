@@ -1,14 +1,13 @@
-
 <template>
-  <textarea-base :data="data"/>
+  <number-base :data="data"/>
 </template>
 
 <script>
-import TextareaBase from '@/components/ADempiere/TextareaBase'
+import NumberBase from '@/components/ADempiere/NumberBase'
 export default {
-  name: 'TextLong',
+  name: 'Number',
   components: {
-    TextareaBase
+    NumberBase
   },
   props: {
     data: {
@@ -18,7 +17,7 @@ export default {
   },
   data() {
     return {
-      input: ''
+      val: 0
     }
   }
 }

@@ -1,7 +1,10 @@
 
 {
-  "ID": 4,
+  "ID": 3,
+  "AD_GroupField": 20,
+  "GroupField": "B",
   "AD_Reference_ID": 7,
+  "AD_Field_Group": null,
   "AD_Reference_Value_ID": 8,
   "AD_Table_ID": 9,
   "AD_Val_Rule_ID": 10,
@@ -12,39 +15,55 @@
   "ContextInfoFormatter": 0,
 
   "DefaultLogic": "Default Logic",
-  "DefaultValue": "Default Value",
+  "DefaultValue": 0,
   "Description": "Description",
   "DisplayLength": 6,
   "DisplayLogic": "Display Logic",
-  "DisplayType": "Display Type",
-  "FieldGroup": 0,
+  "DisplayType": "Location",
   "FieldLength": 0,
   "FormatPattern": 0,
   "Help": "Help",
 
   "InfoFactoryClass": 0,
+  "IsActive": "Y",
   "IsAllowCopy": "Y",
   "IsAllowLogging": "Y",
   "IsAlwaysUpdateable": "N",
+  "IsDisplayed": "Y",
   "IsEncrypted": "Y",
   "IsFieldOnly": "N",
   "IsKey": "Y",
   "IsMandatory": "Y",
   "IsParent": "Y",
   "IsRange": "N",
-  "IsReadOnly": "Y",
+  "IsReadOnly": "N",
   "IsTranslated": "N",
   "IsUpdateable": "Y",
 
-  "Minlength": null,
-  "Maxlength": null,   
-  "Name": "FilePath",
-  "Readonly": false,
+  "Name": "Location",
   "PreferedWidth": 100,
 
+  "Options":[
+    {
+      "label": "Option1",
+      "value": 1
+    },
+    {
+      "label": "Option2",
+      "value": 2
+    },
+    {
+      "label": "Option3",
+      "value": 3
+    },
+    {
+      "label": "Option4",
+      "value": 4
+    }
+  ],
+
   "SeqNo": 0,
-  "SortNo": 2,
+  "SortNo": 80,
   "UUID": "Unique Universal Id",
-  "ValidationCode": 0,
-  "VFormat": "dd-mm-yyy"
+  "ValidationCode": 0
 }

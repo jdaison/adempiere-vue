@@ -4,7 +4,7 @@ const REFERENCES = [
   {
     id: 25,
     type: 'Account',
-    support: false,
+    support: true,
     description: 'Account Element',
     alias: ['Account']
   },
@@ -81,21 +81,21 @@ const REFERENCES = [
   {
     id: 38,
     type: 'FilePath',
-    support: false,
+    support: true,
     description: 'Local File Path',
     alias: ['FilePath', 'File Path']
   },
   {
     id: 38,
     type: 'FilePathOrName',
-    support: false,
+    support: true,
     description: 'Local File Path or Name',
     alias: ['FilePathOrName', 'File Path Or Name']
   },
   {
     id: 13,
     type: 'ID',
-    support: false,
+    support: true,
     description: '10 Digit Identifier',
     alias: ['ID']
   },
@@ -116,21 +116,21 @@ const REFERENCES = [
   {
     id: 17,
     type: 'List',
-    support: false,
+    support: true,
     description: 'Reference List',
     alias: ['List']
   },
   {
     id: 21,
     type: 'Location',
-    support: false,
+    support: true,
     description: 'Location/Address',
     alias: ['Location', 'Location (Address)', 'Location/Address']
   },
   {
     id: 31,
     type: 'Locator',
-    support: false,
+    support: true,
     description: 'Warehouse Locator Data type',
     alias: ['Locator', 'Locator (WH)', 'Locator/WH']
   },
@@ -144,7 +144,7 @@ const REFERENCES = [
   {
     id: 22,
     type: 'Number',
-    support: false,
+    support: true,
     description: 'Float Number',
     alias: ['Number']
   },
@@ -179,7 +179,7 @@ const REFERENCES = [
   {
     id: 30,
     type: 'Search',
-    support: false,
+    support: true,
     description: 'Search Field',
     alias: ['Search']
   },
@@ -193,14 +193,14 @@ const REFERENCES = [
   {
     id: 18,
     type: 'Table',
-    support: false,
+    support: true,
     description: 'Table List',
     alias: ['Table']
   },
   {
     id: 19,
     type: 'TableDirect',
-    support: false,
+    support: true,
     description: 'Direct Table Access',
     alias: ['TableDirect', 'Table Direct']
   },

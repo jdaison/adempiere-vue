@@ -1,14 +1,13 @@
 
 <template>
-  <textarea-base :data="data"/>
+  <text-base :data="data"/>
 </template>
-
 <script>
-import TextareaBase from '@/components/ADempiere/TextareaBase'
+import TextBase from '@/components/ADempiere/TextBase'
 export default {
-  name: 'TextLong',
+  name: 'Account',
   components: {
-    TextareaBase
+    TextBase
   },
   props: {
     data: {

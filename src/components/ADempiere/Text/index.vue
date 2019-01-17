@@ -1,30 +1,19 @@
 
 <template>
-  <div>
-    <el-input
-      v-model="setData.val"
-      :autosize="{ minRows: 2, maxRows: 4}"
-      type="textarea"
-      placeholder="A description is limited to 255 characters."/>
-  </div>
+  <textarea-base :data="data"/>
 </template>
 
 <script>
+import TextareaBase from '@/components/ADempiere/TextareaBase'
 export default {
-  name: 'TextADempiere',
+  name: 'Textarea',
+  components: {
+    TextareaBase
+  },
   props: {
-    setData: {
-      type: Object,
-      default: () => ({
-        val: '',
-        min: '07:50:00',
-        max: '19:00:00',
-        isReadonly: false
-      })
-    },
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {

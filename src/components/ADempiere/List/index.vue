@@ -1,3 +1,4 @@
+
 <template>
   <select-base :data="data"/>
 </template>
