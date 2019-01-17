@@ -1,18 +1,15 @@
 
 <template>
-  <el-input
-    v-model="input"
-    :readonly="data.Readonly"
-    :minlength="data.Minlength"
-    :maxlength="data.Maxlength"
-    :autosize="{ minRows: 2, maxRows: 6}"
-    type="textarea"
-    placeholder="A description or long text."/>
+  <textarea-base :data="data"/>
 </template>
 
 <script>
+import TextareaBase from '@/components/ADempiere/TextareaBase'
 export default {
   name: 'TextLong',
+  components: {
+    TextareaBase
+  },
   props: {
     data: {
       type: Object,

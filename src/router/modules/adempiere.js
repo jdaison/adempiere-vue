@@ -92,7 +92,6 @@ const chartsRouter = {
     },
     {
       path: 'Integer',
-      // component: () => import('@/components/ADempiere/Integer'),
       component: () => import('@/views/ADempiere/IntegerDemo'),
       name: 'Integer',
       meta: { title: 'Integer', noCache: true }
@@ -135,7 +134,6 @@ const chartsRouter = {
     },
     {
       path: 'Quantity',
-      // component: () => import('@/components/ADempiere/Integer'),
       component: () => import('@/views/ADempiere/QuantityDemo'),
       name: 'Quantity',
       meta: { title: 'Quantity', noCache: true }
@@ -160,7 +158,7 @@ const chartsRouter = {
     },
     {
       path: 'Text',
-      component: () => import('@/components/ADempiere/Text'),
+      component: () => import('@/views/ADempiere/TextDemo'),
       name: 'Text',
       meta: { title: 'Text', noCache: true }
     },
