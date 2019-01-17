@@ -4,7 +4,7 @@ const REFERENCES = [
   {
     id: 25,
     type: 'Account',
-    support: false,
+    support: true,
     description: 'Account Element',
     alias: ['Account']
   },

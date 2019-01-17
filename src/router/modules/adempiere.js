@@ -13,6 +13,12 @@ const chartsRouter = {
   },
   children: [
     {
+      path: 'Account',
+      component: () => import('@/views/ADempiere/AccountDemo'),
+      name: 'Account',
+      meta: { title: 'Account', noCache: true }
+    },
+    {
       path: 'dynamic',
       component: () => import('@/views/ADempiere/Dynamic'),
       name: 'Dynamic',

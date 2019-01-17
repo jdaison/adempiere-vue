@@ -1,12 +1,14 @@
 
 <template>
-  <number-base :data="data"/>
+  <text-base :data="data"/>
 </template>
 <script>
-import NumberBase from '@/components/ADempiere/NumberBase'
+import TextBase from '@/components/ADempiere/TextBase'
 export default {
-  name: 'ID',
-  components: { NumberBase },
+  name: 'Account',
+  components: {
+    TextBase
+  },
   props: {
     data: {
       type: Object,
@@ -15,7 +17,7 @@ export default {
   },
   data() {
     return {
-      val: 0
+      input: ''
     }
   }
 }
