@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 
-export function getDynamic() {
+export function getField() {
   return request({
-    url: '/adempiere/dynamic',
+    url: '/adempiere/getField',
     method: 'get'
   })
 }

@@ -13,11 +13,56 @@ for (let i = 0; i < count; i++) {
   }))
 }
 
+var fiedlAdempiere = Mock.mock({
+  'dataAttributes|1': {
+    'DisplayType|+1': [
+      'Account',
+      'Amount',
+      'Binary',
+      'Button',
+      'Color',
+      'CostsPrices',
+      'Date',
+      'DateTime',
+      'FileName',
+      'FilePath',
+      'FilePathOrName',
+      'Image',
+      'Integer',
+      'List',
+      'Memo',
+      'PrinterName',
+      'ProdutAttribute',
+      'Quantity',
+      'Search',
+      'String',
+      'Text',
+      'TextLong',
+      'Time',
+      'YesNo'
+    ],
+    'IsActive': 'Y',
+    'IsDisplayed': 'Y',
+    'IsRange': 'N',
+    'DefaultValue|1-10000': 22
+  }
+})
+
+var panelAdempiere = Mock.mock({
+  'data|1-20': [
+    fiedlAdempiere
+  ]
+})
+
 export default {
-  getDynamic: () => {
+  getPanel: () => {
     return {
-      total: List.length,
-      items: List
+      data: panelAdempiere.data
+    }
+  },
+  getField: () => {
+    return {
+      dataAttributes: fiedlAdempiere.dataAttributes
     }
   }
 }
