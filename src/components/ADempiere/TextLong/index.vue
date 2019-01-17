@@ -2,7 +2,10 @@
 <template>
   <el-input
     v-model="input"
-    :autosize="{ minRows: 2, maxRows: 4}"
+    :readonly="data.Readonly"
+    :minlength="data.Minlength"
+    :maxlength="data.Maxlength"
+    :autosize="{ minRows: 2, maxRows: 6}"
     type="textarea"
     placeholder="A description or long text."/>
 </template>

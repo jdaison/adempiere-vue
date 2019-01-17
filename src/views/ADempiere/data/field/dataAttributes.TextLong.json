@@ -17,7 +17,7 @@
     "Description": "Description",
     "DisplayLength": 6,
     "DisplayLogic": "Display Logic",
-    "DisplayType": "TextLongo",
+    "DisplayType": "TextLong",
     "FieldLength": 0,
     "FormatPattern": 0,
     "Help": "Help",
@@ -38,7 +38,10 @@
     "IsTranslated": "N",
     "IsUpdateable": "Y",
   
+    "Minlength": null,
+    "Maxlength": null,   
     "Name": "TextLong",
+    "Readonly": false,
     "PreferedWidth": 100,
   
     "SeqNo": 0,
