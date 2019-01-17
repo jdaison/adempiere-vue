@@ -141,6 +141,12 @@ const chartsRouter = {
       meta: { title: 'Text', noCache: true }
     },
     {
+      path: 'TextLong',
+      component: () => import('@/views/ADempiere/TextLongDemo'),
+      name: 'TextLong',
+      meta: { title: 'TextLong', noCache: true }
+    },
+    {
       path: 'Time',
       component: () => import('@/views/ADempiere/TimeDemo'),
       name: 'Time',
