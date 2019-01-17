@@ -123,14 +123,14 @@ const REFERENCES = [
   {
     id: 21,
     type: 'Location',
-    support: false,
+    support: true,
     description: 'Location/Address',
     alias: ['Location', 'Location (Address)', 'Location/Address']
   },
   {
     id: 31,
     type: 'Locator',
-    support: false,
+    support: true,
     description: 'Warehouse Locator Data type',
     alias: ['Locator', 'Locator (WH)', 'Locator/WH']
   },
@@ -193,14 +193,14 @@ const REFERENCES = [
   {
     id: 18,
     type: 'Table',
-    support: false,
+    support: true,
     description: 'Table List',
     alias: ['Table']
   },
   {
     id: 19,
     type: 'TableDirect',
-    support: false,
+    support: true,
     description: 'Direct Table Access',
     alias: ['TableDirect', 'Table Direct']
   },

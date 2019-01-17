@@ -104,6 +104,18 @@ const chartsRouter = {
       meta: { title: 'Image', noCache: true }
     },
     {
+      path: 'Location',
+      component: () => import('@/views/ADempiere/LocationDemo'),
+      name: 'Location',
+      meta: { title: 'Location', noCache: true }
+    },
+    {
+      path: 'Locator',
+      component: () => import('@/views/ADempiere/LocatorDemo'),
+      name: 'Locator',
+      meta: { title: 'Locator', noCache: true }
+    },
+    {
       path: 'Memo',
       component: () => import('@/views/ADempiere/MemoDemo'),
       name: 'Memo',
@@ -133,6 +145,18 @@ const chartsRouter = {
       component: () => import('@/views/ADempiere/StringDemo'),
       name: 'String',
       meta: { title: 'String', noCache: true }
+    },
+    {
+      path: 'TableDirect',
+      component: () => import('@/views/ADempiere/TableDirectDemo'),
+      name: 'Table Direct',
+      meta: { title: 'Table Direct', noCache: true }
+    },
+    {
+      path: 'Table',
+      component: () => import('@/views/ADempiere/TableDemo'),
+      name: 'Table',
+      meta: { title: 'Table', noCache: true }
     },
     {
       path: 'Text',
