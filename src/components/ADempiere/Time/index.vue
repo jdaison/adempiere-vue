@@ -1,4 +1,3 @@
-
 <template>
   <el-time-picker
     v-model="data.DefaultValue"
@@ -8,7 +7,6 @@
     :readonly="data.IsReadOnly"
     placeholder="Select time"/>
 </template>
-
 <script>
 export default {
   name: 'Time',
@@ -25,3 +23,4 @@ export default {
   }
 }
 </script>
+<style></style>

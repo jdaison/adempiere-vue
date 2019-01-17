@@ -1,66 +1,34 @@
 <template>
   <div class="block">
-    <span class="demonstration">Default</span>
     <el-date-picker
-      v-model="value1"
-      type="datetime"
-      placeholder="Select date and time"
-      format="dd/MM/yyyy HH:mm:ss"/>
-
-    <span class="demonstration">With shortcuts</span>
-    <el-date-picker
-      v-model="value2"
+      v-model="data.DefaultValue"
+      :value-format="data.VFormat"
+      :min="data.ValueMin"
       :picker-options="pickerOptions1"
-      type="datetime"
+      :range="data.Range"
+      type="datetimerange"
       placeholder="Select date and time"
-      format="dd/MM/yyyy HH:mm:ss"/>
-
-    <span class="demonstration">With default time</span>
-    <el-date-picker
-      v-model="value3"
-      type="datetime"
-      placeholder="Select date and time"
-      default-time="12:00:00"
-      format="dd/MM/yyyy HH:mm:ss"/>
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ADDateTime',
+  name: 'DateTime',
   props: {
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {
     return {
       pickerOptions1: {
-        shortcuts: [{
-          text: 'Today',
-          onClick(picker) {
-            picker.$emit('pick', new Date())
-          }
-        }, {
-          text: 'Yesterday',
-          onClick(picker) {
-            const date = new Date()
-            date.setTime(date.getTime() - 3600 * 1000 * 24)
-            picker.$emit('pick', date)
-          }
-        }, {
-          text: 'A week ago',
-          onClick(picker) {
-            const date = new Date()
-            date.setTime(date.getTime() - 3600 * 1000 * 24 * 7)
-            picker.$emit('pick', date)
-          }
-        }]
-      },
-      value1: '',
-      value2: '',
-      value3: ''
+        disabledDate(range) {
+          return range.getTime() < Date.now()
+        }
+      }
+      // range: this.data.ValueMin + '=' + this.data.ValueMax
     }
   }
 }

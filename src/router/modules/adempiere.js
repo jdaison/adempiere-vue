@@ -68,7 +68,7 @@ const chartsRouter = {
     },
     {
       path: 'dateTime',
-      component: () => import('@/components/ADempiere/DateTime'),
+      component: () => import('@/views/ADempiere/DateTimeDemo'),
       name: 'DateTime',
       meta: { title: 'Date Time', noCache: true }
     },
