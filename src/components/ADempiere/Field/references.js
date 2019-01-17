@@ -95,7 +95,7 @@ const REFERENCES = [
   {
     id: 13,
     type: 'ID',
-    support: false,
+    support: true,
     description: '10 Digit Identifier',
     alias: ['ID']
   },
