@@ -91,6 +91,13 @@ const chartsRouter = {
       meta: { title: 'File Path Or Name', noCache: true }
     },
     {
+      path: 'ID',
+      // component: () => import('@/components/ADempiere/Integer'),
+      component: () => import('@/views/ADempiere/IDDemo'),
+      name: 'ID',
+      meta: { title: 'ID', noCache: true }
+    },
+    {
       path: 'Integer',
       component: () => import('@/views/ADempiere/IntegerDemo'),
       name: 'Integer',
