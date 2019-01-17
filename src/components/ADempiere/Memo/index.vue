@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import TextareaBase from '@/components/ADempiere/TextareaBase'
+import TextareaBase from '@/components/ADempiere/TextAreaBase'
 export default {
   name: 'Memo',
   components: {

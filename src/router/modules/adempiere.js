@@ -25,6 +25,12 @@ const chartsRouter = {
       meta: { title: 'Dynamic Component', noCache: true }
     },
     {
+      path: 'Masonry',
+      component: () => import('@/views/ADempiere/Masonry'),
+      name: 'Masonry',
+      meta: { title: 'Masonry Component', noCache: true }
+    },
+    {
       path: 'TabDemo',
       component: () => import('@/views/ADempiere/Tab'),
       name: 'TabDemo',
@@ -92,7 +98,6 @@ const chartsRouter = {
     },
     {
       path: 'ID',
-      // component: () => import('@/components/ADempiere/Integer'),
       component: () => import('@/views/ADempiere/IDDemo'),
       name: 'ID',
       meta: { title: 'ID', noCache: true }
@@ -134,12 +139,6 @@ const chartsRouter = {
       meta: { title: 'Memo', noCache: true }
     },
     {
-      path: 'CostsPrices',
-      component: () => import('@/views/ADempiere/CostsPricesDemo'),
-      name: 'CostsPrices',
-      meta: { title: 'CostsPrices', noCache: true }
-    },
-    {
       path: 'PrinterName',
       component: () => import('@/views/ADempiere/PrinterNameDemo'),
       name: 'PrinterName',
@@ -170,9 +169,9 @@ const chartsRouter = {
       meta: { title: 'Table Direct', noCache: true }
     },
     {
-      path: 'Table',
+      path: 'TableADempiere',
       component: () => import('@/views/ADempiere/TableDemo'),
-      name: 'Table',
+      name: 'Table ADempiere',
       meta: { title: 'Table', noCache: true }
     },
     {

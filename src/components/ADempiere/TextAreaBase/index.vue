@@ -21,7 +21,11 @@ export default {
   },
   data() {
     return {
-      input: ''
+      input: '',
+      minWidthField: 6,
+      maxWidthField: 24,
+      minHeightField: null,
+      maxHeightField: null
     }
   }
 }
