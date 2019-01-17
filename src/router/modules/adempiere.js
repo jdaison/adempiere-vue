@@ -25,6 +25,24 @@ const chartsRouter = {
       meta: { title: 'Tab Component', noCache: true }
     },
     {
+      path: 'List',
+      component: () => import('@/views/ADempiere/ListDemo'),
+      name: 'List',
+      meta: { title: 'List', noCache: true }
+    },
+    {
+      path: 'Search',
+      component: () => import('@/views/ADempiere/SearchDemo'),
+      name: 'Search',
+      meta: { title: 'Search', noCache: true }
+    },
+    {
+      path: 'Color',
+      component: () => import('@/views/ADempiere/ColorDemo'),
+      name: 'Color',
+      meta: { title: 'Color', noCache: true }
+    },
+    {
       path: 'amount',
       component: () => import('@/views/ADempiere/AmountDemo'),
       name: 'Amount',
@@ -50,7 +68,7 @@ const chartsRouter = {
     },
     {
       path: 'dateTime',
-      component: () => import('@/components/ADempiere/DateTime'),
+      component: () => import('@/views/ADempiere/DateTimeDemo'),
       name: 'DateTime',
       meta: { title: 'Date Time', noCache: true }
     },
@@ -73,11 +91,35 @@ const chartsRouter = {
       meta: { title: 'File Path Or Name', noCache: true }
     },
     {
-      path: 'Integer',
+      path: 'ID',
       // component: () => import('@/components/ADempiere/Integer'),
+      component: () => import('@/views/ADempiere/IDDemo'),
+      name: 'ID',
+      meta: { title: 'ID', noCache: true }
+    },
+    {
+      path: 'Integer',
       component: () => import('@/views/ADempiere/IntegerDemo'),
       name: 'Integer',
       meta: { title: 'Integer', noCache: true }
+    },
+    {
+      path: 'Image',
+      component: () => import('@/views/ADempiere/ImageDemo'),
+      name: 'Image',
+      meta: { title: 'Image', noCache: true }
+    },
+    {
+      path: 'Location',
+      component: () => import('@/views/ADempiere/LocationDemo'),
+      name: 'Location',
+      meta: { title: 'Location', noCache: true }
+    },
+    {
+      path: 'Locator',
+      component: () => import('@/views/ADempiere/LocatorDemo'),
+      name: 'Locator',
+      meta: { title: 'Locator', noCache: true }
     },
     {
       path: 'Memo',
@@ -86,10 +128,28 @@ const chartsRouter = {
       meta: { title: 'Memo', noCache: true }
     },
     {
-      path: 'Quantity',
+      path: 'Number',
+      component: () => import('@/views/ADempiere/NumberDemo'),
+      name: 'Number',
+      meta: { title: 'Number', noCache: true }
+    },
+    {
+      path: 'CostsPrices',
       component: () => import('@/views/ADempiere/CostsPricesDemo'),
       name: 'CostsPrices',
       meta: { title: 'CostsPrices', noCache: true }
+    },
+    {
+      path: 'PrinterName',
+      component: () => import('@/views/ADempiere/PrinterNameDemo'),
+      name: 'PrinterName',
+      meta: { title: 'PrinterName', noCache: true }
+    },
+    {
+      path: 'Quantity',
+      component: () => import('@/views/ADempiere/QuantityDemo'),
+      name: 'Quantity',
+      meta: { title: 'Quantity', noCache: true }
     },
     {
       path: 'String',
@@ -98,16 +158,40 @@ const chartsRouter = {
       meta: { title: 'String', noCache: true }
     },
     {
+      path: 'TableDirect',
+      component: () => import('@/views/ADempiere/TableDirectDemo'),
+      name: 'Table Direct',
+      meta: { title: 'Table Direct', noCache: true }
+    },
+    {
+      path: 'Table',
+      component: () => import('@/views/ADempiere/TableDemo'),
+      name: 'Table',
+      meta: { title: 'Table', noCache: true }
+    },
+    {
       path: 'Text',
-      component: () => import('@/components/ADempiere/Text'),
+      component: () => import('@/views/ADempiere/TextDemo'),
       name: 'Text',
       meta: { title: 'Text', noCache: true }
     },
     {
+      path: 'TextLong',
+      component: () => import('@/views/ADempiere/TextLongDemo'),
+      name: 'TextLong',
+      meta: { title: 'TextLong', noCache: true }
+    },
+    {
       path: 'Time',
-      component: () => import('@/components/ADempiere/Time'),
+      component: () => import('@/views/ADempiere/TimeDemo'),
       name: 'Time',
       meta: { title: 'Time', noCache: true }
+    },
+    {
+      path: 'Url',
+      component: () => import('@/views/ADempiere/UrlDemo'),
+      name: 'Url',
+      meta: { title: 'Url', noCache: true }
     },
     {
       path: 'YesNo',

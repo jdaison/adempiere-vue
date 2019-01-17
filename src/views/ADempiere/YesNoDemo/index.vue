@@ -7,7 +7,7 @@
 
 <script>
 import dataJson from '@/views/ADempiere/data/field/dataAttributes.YesNo.json'
-import Field from '@/components/ADempiere/Field.vue'
+import Field from '@/components/ADempiere/Field'
 
 export default {
   name: 'YesNoDemo',

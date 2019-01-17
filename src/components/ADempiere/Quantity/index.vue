@@ -1,21 +1,25 @@
+
 <template>
-  <div/>
+  <number-base :data="data"/>
 </template>
 
 <script>
+import NumberBase from '@/components/ADempiere/NumberBase'
 export default {
   name: 'Quantity',
+  components: {
+    NumberBase
+  },
   props: {
     data: {
       type: Object,
-      default: () => ({})
+      required: true
     }
   },
   data() {
     return {
+      val: 0
     }
-  },
-  methods: {
   }
 }
 </script>

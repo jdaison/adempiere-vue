@@ -1,15 +1,15 @@
 
 <template>
-  <el-input
-    v-model="input"
-    :autosize="{ minRows: 2, maxRows: 4}"
-    type="textarea"
-    placeholder="A description or long text."/>
+  <textarea-base :data="data"/>
 </template>
 
 <script>
+import TextareaBase from '@/components/ADempiere/TextareaBase'
 export default {
   name: 'Memo',
+  components: {
+    TextareaBase
+  },
   props: {
     data: {
       type: Object,

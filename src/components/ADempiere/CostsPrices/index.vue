@@ -1,16 +1,14 @@
 <template>
-  <el-input-number
-    v-model="val"
-    :precision="data.Decimals"
-    :controls="data.Controls"
-    :disabled="data.IsReadOnly"
-    :value="data.DefaultValue"
-  />
+  <number-base :data="data"/>
 </template>
 
 <script>
+import NumberBase from '@/components/ADempiere/NumberBase'
 export default {
   name: 'CostsPrices',
+  components: {
+    NumberBase
+  },
   props: {
     data: {
       type: Object,
@@ -24,3 +22,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+  .el-input-number.is-controls-right .el-input__inner{
+    padding-right: 15px !important;
+  }
+</style>

@@ -16,8 +16,6 @@ export default {
     return {
       value: ''
     }
-  },
-  methods: {
   }
 }
 </script>
